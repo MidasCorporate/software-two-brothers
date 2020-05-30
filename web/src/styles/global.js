@@ -29,14 +29,6 @@ body, input, button {
 font: 14px 'Roboto', sans-serif;
 }
 
-a {
-  text-decoration: none;
-}
-
-ul {
-  list-style: none;
-}
-
 button {
   cursor: pointer;
 }
