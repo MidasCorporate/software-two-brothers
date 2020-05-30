@@ -10,15 +10,29 @@ import {
   CardContent,
   Container,
   Button,
+  CardImg,
+  CardFliper,
+  Front,
+  Back,
 } from './styles';
 
 import car from '~/assets/carro1.jpg';
+import car2 from '~/assets/carro2.jpg';
 
 export default function Dashboard() {
   return (
     <Container>
       <Card>
-        <Image src={car} alt="Logo" />
+        <CardImg>
+          <CardFliper>
+            <Front>
+              <Image src={car} alt="Logo" />
+            </Front>
+            <Back>
+              <Image src={car2} alt="Logo" />
+            </Back>
+          </CardFliper>
+        </CardImg>
         <CardContent>
           <CardHeader>Matthew</CardHeader>
           <CardDescription>
@@ -29,8 +43,36 @@ export default function Dashboard() {
         </CardContent>
       </Card>
       <Card>
-        <MdRemoveRedEye size={30} color="#FFF" />
-        <Image src={car} alt="Logo" />
+        <CardImg>
+          <CardFliper>
+            <Front>
+              <Image src={car} alt="Logo" />
+            </Front>
+            <Back>
+              <Image src={car2} alt="Logo" />
+            </Back>
+          </CardFliper>
+        </CardImg>
+        <CardContent>
+          <CardHeader>Matthew</CardHeader>
+          <CardDescription>
+            Carro completo e semi novo, quadro rodas novas e porta malas
+            direcional
+          </CardDescription>
+          <Button type="button">Ver</Button>
+        </CardContent>
+      </Card>
+      <Card>
+        <CardImg>
+          <CardFliper>
+            <Front>
+              <Image src={car} alt="Logo" />
+            </Front>
+            <Back>
+              <Image src={car2} alt="Logo" />
+            </Back>
+          </CardFliper>
+        </CardImg>
         <CardContent>
           <CardHeader>Matthew</CardHeader>
           <CardDescription>
