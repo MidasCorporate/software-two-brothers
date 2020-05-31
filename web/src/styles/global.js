@@ -6,8 +6,8 @@ import 'react-perfect-scrollbar/dist/css/styles.css';
 export default createGlobalStyle`
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 
-* {
-  margin: 0;
+/* * { */
+  /* margin: 0;
   padding: 0;
   outline: 0;
   box-sizing: border-box;
@@ -31,5 +31,5 @@ font: 14px 'Roboto', sans-serif;
 
 button {
   cursor: pointer;
-}
+} */
 `;
