@@ -2,9 +2,12 @@ import styled from 'styled-components';
 // import { darken } from 'polished';
 
 export const Container = styled.div`
-  background: ${(props) => (props.colorHeader ? '#44873d' : 'transparent')};
+  background: ${(props) => (props.headerColor ? 'transparent' : '#44873d')};
   position: fixed;
+  width: 100%;
   padding: 0 30px;
+  transition: background 1s;
+  z-index: 2;
 `;
 
 export const Content = styled.div`
