@@ -3,6 +3,7 @@ import React from 'react';
 import { Intro, IntroBody, Container, Row, Coll } from './styles';
 import logo from '~/assets/logo.png';
 import AboutClient from '~/components/About';
+import Service from './Services';
 
 export default function Dashboard() {
   return (
@@ -26,6 +27,7 @@ export default function Dashboard() {
         </IntroBody>
       </Intro>
       <AboutClient />
+      <Service />
     </>
   );
 }
