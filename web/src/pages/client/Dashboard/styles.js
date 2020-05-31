@@ -96,6 +96,7 @@ export const Coll = styled.div`
   img {
     height: 220px;
     width: 250px;
+    margin-top: 40px;
   }
 
   @media (max-width: 640px) {
