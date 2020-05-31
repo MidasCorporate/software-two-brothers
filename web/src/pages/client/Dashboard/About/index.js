@@ -7,7 +7,11 @@ import {
   Row,
   Coll,
   ImageAbout,
+  IntroText,
+  Description,
 } from './styles';
+
+import junp from '~/assets/r.png';
 
 function AboutClient() {
   return (
@@ -18,24 +22,21 @@ function AboutClient() {
         </SectionTitle>
         <Row>
           <Coll>
-            <ImageAbout src="img/about.png" />
+            <ImageAbout src={junp} />
           </Coll>
-          <div className="description-intro-text">
-            <div className="description-intro-text">
+          <IntroText>
+            <Description>
               <h4>Quem nós somos</h4>
               <p>
-                A Granja Rio Verde é uma filial da COOASGO direcionada à
-                atividade de reprodução de suínos. A Multiplicadora tem como
-                principal objetivo a produção de suínos para suprir sua cota de
-                abates junto ao sistema AURORA. Situada no município de Rio
-                Verde de Mato Grosso no estado de Mato Grosso do Sul no
-                Centro-Oeste brasileiro, conta com aproximadamente 40.556,58m² e
-                agrupa 5.000 matrizes reprodutoras.
+                Somos uma empresa especizada em dar aquele grau em seu carro ou
+                moto, todos os nossos serviços, são prestados por ótimos
+                proficionais, trabalhamos de diversas formas, entre em contato
+                para mais informações.
               </p>
-            </div>
-          </div>
-          <div className="description-text">
-            <div className="description-text">
+            </Description>
+          </IntroText>
+          <IntroText>
+            <Description>
               <h4>O que fazemos</h4>
               <p>
                 Nosso complexo de reprodução genética, conta com um sistema de
@@ -57,8 +58,8 @@ function AboutClient() {
                 representam o sistema de captação de água de chuva, reduzem a
                 necessidade de água potável na higienização das instalações.
               </p>
-            </div>
-          </div>
+            </Description>
+          </IntroText>
         </Row>
       </Container>
     </About>
