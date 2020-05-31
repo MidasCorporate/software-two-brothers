@@ -2,7 +2,7 @@ import styled from 'styled-components';
 // import { darken } from 'polished';
 
 export const Container = styled.div`
-  background: #fff;
+  background: #44873d;
   padding: 0 30px;
 `;
 
@@ -12,22 +12,65 @@ export const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: 0 222.5px;
+
   nav {
     display: flex;
     align-items: center;
 
-    img {
-      width: 226px;
+    .logo {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 5px;
+      }
+
+      div {
+        margin-right: 20px;
+        padding-right: 20px;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        .two {
+          color: #f8db0c;
+          margin-right: 2px;
+        }
+
+        .brothers {
+          color: #333;
+        }
+      }
     }
 
-    a {
-      font-weight: bold;
-      color: #333;
-      margin-right: 20px;
+    ul {
+      display: flex;
+      flex-direction: row;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        & + li {
+          margin-left: 30px;
+        }
+
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      a {
+        /* text-decoration: none; */
+        color: #fff;
+        /* margin-right: ; */
+      }
     }
   }
+
   aside {
     display: flex;
     align-items: center;
+
+    a {
+      margin: 0 15px;
+    }
   }
 `;
