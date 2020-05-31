@@ -1,7 +1,8 @@
 import React from 'react';
 
-import { Card, Grid, Icon, Rating } from 'semantic-ui-react';
+import { Grid, Icon, Rating } from 'semantic-ui-react';
 
+import { MdComment } from 'react-icons/md';
 import {
   Image,
   CardHeader,
@@ -9,16 +10,19 @@ import {
   CardContent,
   ContainerCard,
   Coments,
+  CardComents,
   Container,
   Button,
   CardImg,
   CardFliper,
   Front,
   Back,
+  Card,
 } from './styles';
 
 import car from '~/assets/carro1.jpg';
 import car2 from '~/assets/carro2.jpg';
+import moto1 from '~/assets/moto1.jpg';
 
 export default function Dashboard() {
   const sale = ['car1', 'car2', 'car3', 'car4'];
@@ -59,22 +63,26 @@ export default function Dashboard() {
             ))}
           </Grid.Row>
         </Grid>
-        <Grid>
-          <Grid.Row columns={5}>
-            {coments.map((sal) => (
-              <Grid.Column>
-                <Card>
-                  <Card.Content header="Paulinho Veloster" />
-                  <span>27/05/2020</span>
-                  <Card.Content description={description} />
-                  <Card.Content extra>
-                    <Rating icon="star" defaultRating={3} maxRating={4} />
-                  </Card.Content>
-                </Card>
-              </Grid.Column>
-            ))}
-          </Grid.Row>
-        </Grid>
+        <Coments>
+          <Image src={moto1} alt="Logo" />
+          <Grid>
+            <Grid.Row columns={5}>
+              {coments.map((sal) => (
+                <Grid.Column>
+                  <CardComents>
+                    <MdComment size={20} color="#FFF" />
+                    <strong>Paulinho Veloster</strong>
+                    <span>27/05/2020</span>
+                    <div>
+                      Sempre lei meu veloster lá, e nunva me decepsionei com a
+                      qualidade do serviçi
+                    </div>
+                  </CardComents>
+                </Grid.Column>
+              ))}
+            </Grid.Row>
+          </Grid>
+        </Coments>
       </Container>
     </>
   );

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  padding: 40px;
   margin: auto;
 
   h1 {
@@ -11,11 +10,6 @@ export const Container = styled.div`
     transition: 1s;
     flex-direction: column;
     align-items: center;
-  }
-  span {
-    margin-left: 12px;
-    color: #999;
-    margin-top: -10px;
   }
 `;
 
@@ -31,17 +25,14 @@ export const Card = styled.div`
   transition: 1s;
   border: 0;
   margin-bottom: 30px;
-
-  /* padding: 10px; */
-  /* border-radius: 4px; */
   background: #fff;
   width: 100%;
-  box-shadow: 0 1px 4px 0 #eee;
+  box-shadow: 0 1px 4px 0 #999;
   position: relative;
   display: flex;
   flex-direction: column;
-
   font-size: 0.875rem;
+
   @media (max-width: 600px) {
     transition: 1s;
     width: 80%;
@@ -111,5 +102,19 @@ export const Button = styled.button`
 `;
 
 export const Coments = styled.div`
-  flex-direction: row;
+  margin-top: 400px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  img {
+    position: absolute;
+    height: 600px;
+  }
+  span {
+    margin-left: 12px;
+    color: #999;
+  }
 `;
+
+export const CardComents = styled.div``;
