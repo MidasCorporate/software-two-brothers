@@ -2,7 +2,8 @@ import styled from 'styled-components';
 // import { darken } from 'polished';
 
 export const Container = styled.div`
-  background: #44873d;
+  background: ${(props) => (props.colorHeader ? '#44873d' : 'transparent')};
+  position: fixed;
   padding: 0 30px;
 `;
 
@@ -23,7 +24,13 @@ export const Content = styled.div`
       align-items: center;
 
       svg {
+        color: #eee;
         margin-right: 5px;
+        transition: color 0.5s;
+
+        :hover {
+          color: #333;
+        }
       }
 
       div {
@@ -71,6 +78,15 @@ export const Content = styled.div`
 
     a {
       margin: 0 15px;
+
+      svg {
+        color: #eee;
+        transition: color 0.5s;
+
+        :hover {
+          color: #333;
+        }
+      }
     }
   }
 `;
