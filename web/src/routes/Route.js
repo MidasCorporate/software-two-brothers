@@ -14,6 +14,14 @@ export default function RouteWrapper({
   isPrivate,
   ...rest
 }) {
+  // const { signed } = store.getState().auth;
+
+  // if (!signed && isPrivate) {
+  //   return <Redirect to="/" />;
+  // }
+  // if (signed && !isPrivate) {
+  //   return <Redirect to="/" />;
+  // }
   const { signed } = store.getState().auth;
 
   if (signed && isPrivate) {
