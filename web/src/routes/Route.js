@@ -22,6 +22,14 @@ export default function RouteWrapper({
   // if (signed && !isPrivate) {
   //   return <Redirect to="/" />;
   // }
+  const { signed } = store.getState().auth;
+
+  if (signed && isPrivate) {
+    return <Redirect to="/dashboardAdm" />;
+  }
+  if (signed && !isPrivate) {
+    return <Redirect to="/" />;
+  }
 
   const Layouts = LayoutClient;
 

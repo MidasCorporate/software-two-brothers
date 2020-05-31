@@ -1,22 +1,37 @@
 import styled from 'styled-components';
 
 export const Container = styled.div`
-  transition: 1s;
-  margin: 0 -15px !important;
-  display: flex;
-  flex-direction: row;
+  padding: 40px;
+  margin: auto;
+
+  h1 {
+    text-align: center;
+  }
   @media (max-width: 700px) {
     transition: 1s;
     flex-direction: column;
     align-items: center;
   }
+  span {
+    margin-left: 12px;
+    color: #999;
+    margin-top: -10px;
+  }
+`;
+
+export const ContainerCard = styled.div`
+  transition: 1s;
+  max-width: 90%;
+
+  display: flex;
+  flex-direction: row;
 `;
 
 export const Card = styled.div`
   transition: 1s;
   border: 0;
   margin-bottom: 30px;
-  margin-left: 10px;
+
   /* padding: 10px; */
   /* border-radius: 4px; */
   background: #fff;
@@ -25,9 +40,7 @@ export const Card = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  min-width: 0;
-  max-width: 300px;
-  word-wrap: break-word;
+
   font-size: 0.875rem;
   @media (max-width: 600px) {
     transition: 1s;
@@ -35,7 +48,6 @@ export const Card = styled.div`
   }
 `;
 export const CardImg = styled.div`
-  width: 300px;
   height: 200px;
   perspective: 1000px;
 `;
@@ -73,15 +85,6 @@ export const Image = styled.img`
     transition: 1s;
     width: 83%;
   }
-  /* :hover {
-    transition: 1s; */
-  /* margin-top: 40px; */
-
-  /* box-shadow: 0 0 3em #333; */
-  /* -webkit-box-shadow: -35px 32px 14px rgba(29, 140, 231, 0.45);
-    -moz-box-shadow: -35px 32px 14px rgba(29, 140, 231, 0.45);
-    box-shadow: -35px 32px 14px rgba(29, 140, 231, 0.45); */
-  /* cursor: pointer; */
 `;
 
 export const CardHeader = styled.div`
@@ -105,4 +108,8 @@ export const Button = styled.button`
   :hover {
     color: #999;
   }
+`;
+
+export const Coments = styled.div`
+  flex-direction: row;
 `;
