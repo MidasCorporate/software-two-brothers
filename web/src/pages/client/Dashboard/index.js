@@ -19,7 +19,7 @@ export default function Dashboard() {
                 <h1>
                   Two <span>Brothers</span>
                 </h1>
-                <p> Especialistas na saude automobilistica</p>
+                <p> Especialistas em saude automobilistica</p>
                 <a href="#about">Saber Mais</a>{' '}
               </Coll>
             </Row>

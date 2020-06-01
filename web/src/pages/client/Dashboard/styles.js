@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import backgroundImg from '~/assets/yam.jpg';
+import backgroundImg from '~/assets/23.jpg';
 
 export const Intro = styled.div`
   display: table;
@@ -29,21 +29,26 @@ export const IntroBody = styled.div`
     color: rgba(255, 255, 255, 0.8);
     text-transform: uppercase;
     margin-top: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
   }
 
   span {
-    color: #b5e80d;
-    text-shadow: 0 0px #b5e80d;
+    color: #f7eb06;
+    text-shadow: 0 0px #f7eb06;
+    font-family: 'Oswald', sans-serif;
+    font-style: italic;
   }
 
   p {
     font-size: 18px;
+    margin-bottom: 45px;
   }
 
   a {
     color: #333;
     font-weight: 800;
-    background: #b5e80d;
+    background: #f7eb06;
     border-radius: 4px;
     border: 0;
     padding: 12px 24px;
@@ -53,8 +58,9 @@ export const IntroBody = styled.div`
 
     :hover,
     :focus {
-      color: #fff;
-      background-color: #216600;
+      color: black;
+      font-weight: 900;
+      background-color: #f4b107;
     }
   }
   @media (min-width: 768px) {
