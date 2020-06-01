@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Intro, IntroBody, Container, Row, Coll } from './styles';
 import logo from '~/assets/logo.png';
+import Service from './Services';
 import AboutClient from '~/pages/client/Dashboard/About';
 
 export default function Dashboard() {
@@ -26,6 +27,7 @@ export default function Dashboard() {
         </IntroBody>
       </Intro>
       <AboutClient />
+      <Service />
     </>
   );
 }
