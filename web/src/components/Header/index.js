@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
-import { GiSpeedometer } from 'react-icons/gi';
+import logo from '~/assets/logo.png';
 
 // import logo from '~/assets/twobrothers3.svg';
 
@@ -10,6 +10,7 @@ import { Container, Content } from './styles';
 
 function Header() {
   const [headerColor, setHeaderColor] = useState(false);
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
     const updateNavbarColor = () => {
@@ -31,18 +32,18 @@ function Header() {
     };
   });
 
+  function handleToggle() {
+    setOpen(!open);
+  }
+
   return (
     <Container headerColor={headerColor}>
       <Content>
         <nav>
           <Link to="/" className="logo">
-            <GiSpeedometer size={51} />
-            <div>
-              <strong className="two">TWO</strong>
-              <strong className="brothers">BROTHERS</strong>
-            </div>
+            <img src={logo} alt="twobrothers" />
           </Link>
-          <ul>
+          <ul open={open}>
             <li>
               <Link to="/">INÍCIO</Link>
             </li>
@@ -56,6 +57,14 @@ function Header() {
               <Link to="/">CONTATOS</Link>
             </li>
           </ul>
+          <button className="menu" type="button" onClick={handleToggle}>
+            <div className="iconMenu">
+              <span>
+                <span />
+              </span>
+            </div>
+            <strong>MENU</strong>
+          </button>
         </nav>
 
         <aside>
