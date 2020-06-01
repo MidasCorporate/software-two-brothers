@@ -8,6 +8,20 @@ export const Container = styled.div`
   padding: 0 30px;
   transition: background 1s;
   z-index: 2;
+  @media (max-width: 768px) {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    transition: background 1s;
+    padding: 0;
+  }
+
+  /* @media (min-width: 992px) {
+    width: 270px;
+  } */
+  /* @media (min-width: 1200px) {
+    width: 1170px;
+  } */
 `;
 
 export const Content = styled.div`
@@ -17,6 +31,12 @@ export const Content = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0 222.5px;
+
+  /* @media (min-width: 768px) {
+    position: fixed;
+    transition: background 1s;
+    margin: 0;
+  } */
 
   nav {
     display: flex;

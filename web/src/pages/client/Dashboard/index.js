@@ -27,7 +27,7 @@ export default function Dashboard() {
         </IntroBody>
       </Intro>
       <AboutClient />
-      <Service />
+      {/* <Service /> */}
     </>
   );
 }
