@@ -23,6 +23,7 @@ export const Container = styled.div`
 `;
 
 export const SectionTitle = styled.div`
+  text-align: center;
   padding: 30px 0;
   h2 {
     margin-bottom: 30px;
@@ -61,7 +62,24 @@ export const Coll = styled.div`
 export const ImageAbout = styled.img`
   display: block;
   max-width: 100%;
+  margin-top: -90px;
   height: auto;
 `;
 
-export const IntroText = styled.div``;
+export const IntroText = styled.div`
+  margin: 0;
+  padding: 0px;
+  width: 80%;
+  margin-left: 20%;
+  margin-top: -10px;
+`;
+
+export const Description = styled.div`
+  padding: 0px;
+  width: 80%;
+  margin-left: 20%;
+  margin-top: 10px;
+  h4 {
+    margin-top: 20px;
+  }
+`;

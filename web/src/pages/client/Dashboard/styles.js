@@ -23,6 +23,7 @@ export const Intro = styled.div`
 
 export const IntroBody = styled.div`
   h1 {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 76px;
     font-weight: 700;
     color: rgba(255, 255, 255, 0.8);

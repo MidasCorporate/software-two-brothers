@@ -2,8 +2,12 @@ import React from 'react';
 
 import { Intro, IntroBody, Container, Row, Coll } from './styles';
 import logo from '~/assets/logo.png';
+<<<<<<< HEAD
 import AboutClient from '~/components/About';
 import Service from './Services';
+=======
+import AboutClient from '~/pages/client/Dashboard/About';
+>>>>>>> 0c5024e72fb082c71b998537434c5fa911002417
 
 export default function Dashboard() {
   return (
