@@ -58,9 +58,9 @@ export const IntroBody = styled.div`
 
     :hover,
     :focus {
-      color: black;
+      color: #f7eb06;
       font-weight: 900;
-      background-color: #f4b107;
+      background-color: #333;
     }
   }
   @media (min-width: 768px) {
