@@ -1,8 +1,13 @@
 import React from 'react';
 
-import polimento from '~/assets/polimento.png';
-import lavagem from '~/assets/lavagem.png';
+import polish from '~/assets/polish.png';
+import detailing from '~/assets/detailing.png';
+import lavagem2 from '~/assets/lavagem2.png';
 import seco from '~/assets/seco.png';
+import insulfilm from '~/assets/insulfilm.png';
+import tratamento from '~/assets/tratamento.png';
+import vendas from '~/assets/vendas.png';
+import envelopamento4 from '~/assets/envelopamento4.png';
 import { Wrapper, Container, Title, Content, Service } from './styles';
 
 function Services() {
@@ -10,35 +15,40 @@ function Services() {
     <Wrapper>
       <Container>
         <Title>
-          <h2>Conheça alguns de nosso serviços</h2>
+          <h2>Serviços oferecido</h2>
         </Title>
         <Content className="content">
           <Service className="service">
-            <img src={polimento} alt="Polimento" />
-            <h3>Polimento Cristalizado</h3>
-            <p>
-              Polimento Cristalizado (Remove riscos, manchas, protege a pintura
-              e dá brilho. Nesse processo é utilizado massa de polir e a máquina
-              de polir politriz);
-            </p>
+            <img src={polish} alt="Polimento" />
+            <strong>Polimento Cristalizado</strong>
           </Service>
           <Service>
-            <img src={lavagem} alt="Polimento" />
-            <h3>Lavagem</h3>
-            <p>
-              Lavagem externa, inclusive por baixo do veículo, motor (com
-              autorização) e limpeza interna.
-            </p>
+            <img src={lavagem2} alt="Polimento" />
+            <strong>Lavagem</strong>
+          </Service>
+          <Service>
+            <img src={detailing} alt="Polimento" />
+            <strong>Detalhamento</strong>
           </Service>
           <Service>
             <img src={seco} alt="Polimento" />
-            <h3>Lavagem a Seco</h3>
-            <p>
-              Limpeza do interior de veículos e muito mais! Realizamos a lavagem
-              com shampoo antibactericida que elimina a ação de fungos, ácaros e
-              bactérias, através de uma poderosa fórmula de limpeza com base de
-              produtos naturais.
-            </p>
+            <strong>Lavagem a Seco</strong>
+          </Service>
+          <Service>
+            <img src={insulfilm} alt="Polimento" />
+            <strong>Insulfilme</strong>
+          </Service>
+          <Service>
+            <img src={envelopamento4} alt="Polimento" />
+            <strong>Envelopamento</strong>
+          </Service>
+          <Service>
+            <img src={tratamento} alt="Polimento" />
+            <strong>Tratamento de couro</strong>
+          </Service>
+          <Service>
+            <img src={vendas} alt="Polimento" />
+            <strong>Venda de motos</strong>
           </Service>
         </Content>
       </Container>

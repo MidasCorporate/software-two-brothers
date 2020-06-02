@@ -1,29 +1,20 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
-  padding: 40px 0;
+  width: 100%;
   background: #f6f6f6;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  /* align-items: center; */
 `;
 
 export const Container = styled.div`
-  padding: 0 15px;
-  margin: 0 auto;
+  margin-left: 220px;
+  /* margin: 0 auto; */
+  /* align-items: center; */
   /* justify-content: center; */
-
-  @media (min-width: 768px) {
-    width: 750px;
-  }
-  @media (min-width: 992px) {
-    width: 970px;
-  }
-  @media (min-width: 1200px) {
-    width: 1170px;
-  }
 `;
 
 export const Title = styled.div`
-  text-align: center;
   padding: 30px 0;
   h2 {
     margin-bottom: 30px;
@@ -32,60 +23,47 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
+  width: 180px;
+  height: 246px;
+  /* align-items: center; */
+  /* justify-content: center; */
 
-  /* @media (min-width: 768px) {
-    width: 750px;
-  }
-  @media (min-width: 992px) {
-    width: 970px;
-  } */
-  @media (max-width: 1200px) {
-    /* grid-template-columns: repeat(2, 1fr); */
-    width: 300px;
-
-    /* div {
-      width: 300px;
-
-      img {
-        width: 200px;
-      }
-    } */
-  }
-
-  @media (max-width: 992px) {
+  @media (max-width: 720px) {
     grid-template-columns: repeat(1, 1fr);
-
-    div {
-      width: 100%;
-
-      img {
-        width: 200px;
-      }
-    }
   }
 `;
 
 export const Service = styled.div`
   display: flex;
+  width: 180px;
+  height: 246px;
   flex-direction: column;
   padding: 20px;
-  background: #333;
+  background: #f6d001;
   margin-bottom: 10px;
   border-radius: 4px;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
 
   img {
+    width: 91px;
     border-radius: 4px;
   }
 
-  h3 {
-    color: #f6f6f6;
+  strong {
+    display: flex;
+    font-size: 22px;
+    color: #000;
   }
 
   p {
-    color: #999;
+    color: #666;
   }
+
+  /* @media (max-width: 1280px) {
+    width: 300px;
+    height: 438.42px;
+  } */
 `;
