@@ -114,3 +114,7 @@ export const Coll = styled.div`
     }
   }
 `;
+
+export const Maps = styled.div`
+  /* z-index: 3; */
+`;

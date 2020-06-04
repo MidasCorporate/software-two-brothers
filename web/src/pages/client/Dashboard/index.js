@@ -1,15 +1,17 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-import { Intro, IntroBody, Container, Row, Coll } from './styles';
+import { Intro, IntroBody, Container, Row, Coll, Maps } from './styles';
 import logo from '~/assets/logo.png';
 import Service from './Services';
 import AboutClient from '~/pages/client/Dashboard/About';
+import Contact from '~/pages/client/Dashboard/Contact';
 
 function Dashboard({ google }) {
   const mapStyles = {
+    zIndex: '4',
     width: '100%',
-    height: '70%',
+    height: '65%',
   };
 
   return (
@@ -34,14 +36,17 @@ function Dashboard({ google }) {
       </Intro>
       <AboutClient />
       <Service />
-      <Map
-        google={google}
-        zoom={18}
-        style={mapStyles}
-        initialCenter={{ lat: -19.3949988, lng: -54.5728501 }}
-      >
-        <Marker position={{ lat: -19.3949988, lng: -54.5728501 }} />
-      </Map>
+      {/* <Maps>
+        <Map
+          google={google}
+          zoom={18}
+          style={mapStyles}
+          initialCenter={{ lat: -19.3949988, lng: -54.5728501 }}
+        >
+          <Marker position={{ lat: -19.3949988, lng: -54.5728501 }} />
+        </Map>
+      </Maps> */}
+      <Contact />
     </>
   );
 }
