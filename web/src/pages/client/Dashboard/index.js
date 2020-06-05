@@ -5,6 +5,7 @@ import { Intro, IntroBody, Container, Row, Coll, Maps } from './styles';
 import logo from '~/assets/logo.png';
 import Service from './Services';
 import AboutClient from '~/pages/client/Dashboard/About';
+import Reviews from '~/pages/client/Dashboard/Reviews';
 import Contact from '~/pages/client/Dashboard/Contact';
 
 function Dashboard({ google }) {
@@ -36,6 +37,7 @@ function Dashboard({ google }) {
       </Intro>
       <AboutClient />
       <Service />
+      <Reviews />
       {/* <Maps>
         <Map
           google={google}
