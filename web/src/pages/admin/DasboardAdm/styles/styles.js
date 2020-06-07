@@ -58,7 +58,7 @@ export const CardHeader = styled.header`
   margin-top: -45px;
   margin-left: -10px;
   background: red;
-  position: absolute;
+  /* position: absolute; */
   padding: 5px;
   border-radius: 4px;
 `;
@@ -76,17 +76,91 @@ export const CardBody = styled.div`
   }
 `;
 
-// export const CardOptionBaner = styled.div`
-//   height: 70px;
-//   width: 400px;
-//   margin-left: -20px;
-//   margin-top: 10px;
-//   border-radius: 4px;
-//   background: transparent;
-//   position: absolute;
-//   transition: border-bottom 0.5s ease-out;
-//   :hover {
-//     width: 900px;
-//     border-bottom: 3px solid red;
-//   }
-// `;
+export const WindowMessage = styled.div`
+  /* display: none; */
+  background-color: #fff;
+  border: 2px solid red;
+  color: #999;
+  padding: 50px 25px 100px 25px;
+  border-radius: 4px;
+  /* margin-top: 40px; */
+  margin-left: 45px;
+  z-index: 1;
+  display: ${(props) => (props.tag ? 'flex' : 'none')};
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  /* opacity: 0.9; */
+  position: absolute;
+  width: 50%;
+  height: 600px;
+  animation: slide-mensagem 1s;
+
+  @keyframes slide-mensagem {
+    from {
+      transform: translate3d(0px, -100px, 0px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 1;
+    }
+  }
+
+  textarea {
+    margin-top: 80px;
+  }
+
+  h2 {
+    height: 40px;
+  }
+`;
+
+export const DivButton = styled.div`
+  text-align: center;
+  margin-left: -120px;
+
+  .btn {
+    border: 1px solid red;
+    border-radius: 4px;
+    background: none;
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    margin: 10px;
+    transition: 0.8s;
+
+    overflow: hidden;
+    position: absolute;
+  }
+  .btn1 {
+    color: red;
+  }
+  .btn1:hover {
+    strong {
+      color: #fff;
+      /* z-index: 1; */
+      position: relative;
+    }
+  }
+  .btn::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: red;
+    /* z-index: 1; */
+    transition: 0.8s;
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+  .btn1::before {
+    top: 0;
+    border-radius: 0 0 50% 50%;
+  }
+  .btn1:hover::before {
+    height: 180%;
+  }
+`;
