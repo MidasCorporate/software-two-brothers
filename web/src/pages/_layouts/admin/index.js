@@ -1,19 +1,20 @@
+/* eslint-disable react/jsx-props-no-spreading */
+/* eslint-disable no-shadow */
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// import Header from '~/components/Header';
+import { Wrapper, Content } from './styles';
 
-import { Wrapper } from './styles';
-
-export default function DefaultLayout({ children }) {
+function AuthLayout({ children }) {
   return (
     <Wrapper>
-      {/* <Header /> */}
-      {children}
+      <Content>{children}</Content>
     </Wrapper>
   );
 }
 
-DefaultLayout.propTypes = {
+export default AuthLayout;
+
+AuthLayout.propTypes = {
   children: PropTypes.element.isRequired,
 };

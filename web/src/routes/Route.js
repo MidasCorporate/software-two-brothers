@@ -4,9 +4,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
-import LayoutClient from '~/pages/_layouts/client';
-// import LayoutAdmin from '~/pages/_layouts/admin';
-
 import { store } from '~/store';
 
 export default function RouteWrapper({
@@ -15,34 +12,16 @@ export default function RouteWrapper({
   ...rest
 }) {
   // const { signed } = store.getState().auth;
-
-  // if (!signed && isPrivate) {
-  //   return <Redirect to="/" />;
-  // }
-  // if (signed && !isPrivate) {
-  //   return <Redirect to="/" />;
-  // }
-  const { signed } = store.getState().auth;
-
-  if (signed && isPrivate) {
-    return <Redirect to="/dashboardAdm" />;
-  }
-  if (signed && !isPrivate) {
+  const signed = true;
+  if (!signed && isPrivate) {
     return <Redirect to="/" />;
   }
 
-  const Layouts = LayoutClient;
+  if (signed && !isPrivate) {
+    return <Redirect to="/dashboardAdm" />;
+  }
 
-  return (
-    <Route
-      {...rest}
-      render={(props) => (
-        <Layouts>
-          <Component {...props} />
-        </Layouts>
-      )}
-    />
-  );
+  return <Route {...rest} render={(props) => <Component {...props} />} />;
 }
 
 RouteWrapper.prototype = {

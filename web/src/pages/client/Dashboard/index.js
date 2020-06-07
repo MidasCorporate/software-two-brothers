@@ -7,6 +7,7 @@ import Service from './Services';
 import AboutClient from '~/pages/client/Dashboard/About';
 import Reviews from '~/pages/client/Dashboard/Reviews';
 import Contact from '~/pages/client/Dashboard/Contact';
+import Header from '~/components/Header';
 
 function Dashboard({ google }) {
   const mapStyles = {
@@ -17,6 +18,7 @@ function Dashboard({ google }) {
 
   return (
     <>
+      <Header />
       <Intro>
         <IntroBody>
           <Container>

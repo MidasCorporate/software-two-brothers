@@ -2,8 +2,6 @@ import styled from 'styled-components';
 // import { darken } from 'polished';
 
 export const Wrapper = styled.div`
-  height: 800px;
-  width: -100%;
   background: #eee;
 
   /* display: flex;
