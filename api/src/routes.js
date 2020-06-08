@@ -19,6 +19,7 @@ routes.use(authMiddleware);
 routes.get('/user', UserController.index);
 routes.put('/user', UserController.update);
 
+routes.get('/files', FileController.index);
 routes.post('/files', upload.single('file'), FileController.store);
 
 export default routes;
