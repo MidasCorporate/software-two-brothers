@@ -79,6 +79,7 @@ export const Container = styled.div`
       margin: 5px 0;
       border-radius: 4px;
       background: #f6f6f6;
+      padding-top: 5px;
     }
 
     button {
