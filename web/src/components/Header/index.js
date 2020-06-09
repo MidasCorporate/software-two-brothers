@@ -4,8 +4,6 @@ import { Link } from 'react-router-dom';
 import { FaFacebookF, FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import logo from '~/assets/logo.png';
 
-// import logo from '~/assets/twobrothers3.svg';
-
 import { Container, Content } from './styles';
 
 function Header() {

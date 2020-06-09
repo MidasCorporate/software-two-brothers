@@ -26,6 +26,7 @@ export const SectionTitle = styled.div`
   text-align: center;
   padding: 30px 0;
   h2 {
+    color: #333;
     margin-bottom: 30px;
   }
 `;
@@ -80,6 +81,11 @@ export const Description = styled.div`
   margin-left: 20%;
   margin-top: 10px;
   h4 {
+    color: #555;
     margin-top: 20px;
+  }
+
+  p {
+    color: #777;
   }
 `;

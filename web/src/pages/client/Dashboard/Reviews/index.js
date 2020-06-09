@@ -38,7 +38,7 @@ function Reviews() {
               </p>
             </div>
             <strong>Alessandro Silva</strong>
-            <p>1h atrás</p>
+            <p>09 junho, 2020</p>
           </Review>
         </Content>
       </Container>

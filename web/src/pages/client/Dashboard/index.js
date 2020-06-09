@@ -1,7 +1,7 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
-import { Intro, IntroBody, Container, Row, Coll, Maps } from './styles';
+import { Intro, IntroBody, Container, Row, Coll, Maps, Footer } from './styles';
 import logo from '~/assets/logo.png';
 import Service from './Services';
 import AboutClient from '~/pages/client/Dashboard/About';
@@ -51,6 +51,14 @@ function Dashboard({ google }) {
         </Map>
       </Maps> */}
       <Contact />
+      <Footer>
+        <span>
+          <div>
+            <strong>Two Brothers &copy;</strong>
+            2020 - Todos os direitos reservados
+          </div>
+        </span>
+      </Footer>
     </>
   );
 }

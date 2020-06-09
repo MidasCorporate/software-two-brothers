@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components';
-import { below, above } from 'styles/media';
+// import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
   background: ${(props) => (props.headerColor ? 'transparent' : '#333')};
@@ -9,6 +9,16 @@ export const Container = styled.div`
   transition: background 1s;
   z-index: 2;
 `;
+
+// export const StyledLink = styled(NavLink).attrs({ activeClassName: 'visited' })`
+//   color: #999;
+//   text-transform: uppercase;
+//   font-weight: bold;
+//   transition: color 0.5s;
+//   &:hover {
+//     color: #444;
+//   }
+// `;
 
 export const Content = styled.header`
   height: 64px;
@@ -21,43 +31,19 @@ export const Content = styled.header`
     display: flex;
     align-items: center;
 
-    /* ${below(
-      'md',
+    ${(props) =>
+      props.open &&
       css`
-        display: block;
-      `
-    )} */
-
-    /* ${({ open }) =>
-      open &&
-      below(
-        'md',
-        css`
-          display: flex;
-          position: fixed;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background: rgba(255, 255, 255, 0.9);
-          flex-direction: column;
-          justify-content: center;
-        `
-      )} */
-
-      ${(props) =>
-        props.open &&
-        css`
-          display: flex;
-          position: fixed;
-          width: 100%;
-          height: 100%;
-          top: 0;
-          left: 0;
-          background: rgba(255, 255, 255, 0.9);
-          flex-direction: column;
-          justify-content: center;
-        `}
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.9);
+        flex-direction: column;
+        justify-content: center;
+      `}
 
     .logo {
       display: flex;
@@ -76,22 +62,26 @@ export const Content = styled.header`
 
     ul {
       display: flex;
-      flex-direction: row;
       list-style: none;
       margin: 0;
       padding: 0;
 
       li {
+        text-transform: uppercase;
+        font-weight: bold;
+
         & + li {
           margin-left: 30px;
         }
-
-        text-transform: uppercase;
-        font-weight: bold;
       }
 
-      a {
+      li a {
         color: #f7eb06;
+        transition: color 0.5s;
+
+        &:hover {
+          color: #eee;
+        }
       }
     }
   }
@@ -203,7 +193,7 @@ export const Content = styled.header`
     }
   }
 
-  @media(min-width: 721px) {
+  @media (min-width: 721px) {
     nav button {
       display: none;
     }
