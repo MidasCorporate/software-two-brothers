@@ -46,13 +46,13 @@ function Header() {
               <Link to="/">INÍCIO</Link>
             </li>
             <li>
-              <Link to="/">SOBRE</Link>
+              <a href="#sobre">SOBRE</a>
             </li>
             <li>
-              <Link to="/">COMENTÁRIOS</Link>
+              <a href="#servicos">SERVIÇOS</a>
             </li>
             <li>
-              <Link to="/">CONTATOS</Link>
+              <a href="#contatos">CONTATOS</a>
             </li>
           </ul>
           <button className="menu" type="button" onClick={handleToggle}>
@@ -66,15 +66,15 @@ function Header() {
         </nav>
 
         <aside>
-          <Link to="https://www.facebook.com/Two-Brothers-111881983785700/">
+          <a href="https://www.facebook.com/Two-Brothers-111881983785700/">
             <FaFacebookF size={16} />
-          </Link>
-          <Link to="https://www.instagram.com/">
+          </a>
+          <a href="https://www.instagram.com/">
             <FaInstagram size={18} />
-          </Link>
-          <Link to="(67) 99840-8117">
+          </a>
+          <a href="https://api.whatsapp.com/send?phone=5567998408117">
             <FaWhatsapp size={18} />
-          </Link>
+          </a>
         </aside>
       </Content>
     </Container>

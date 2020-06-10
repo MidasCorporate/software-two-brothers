@@ -3,12 +3,13 @@ import testimonial from '~/assets/testimonial_bg.jpg';
 import portfolio from '~/assets/portfolio_bg.jpg';
 
 export const Wrapper = styled.div`
-  background: url(${testimonial}) no-repeat scroll 0 0;
+  /* background: url(${testimonial}) no-repeat scroll 0 0;
   background-size: cover;
-  position: relative;
+  position: relative; */
+  background: #f6f6f6;
   padding-bottom: 45px;
 
-  ::before {
+  /* ::before {
     background: #f6f6f6;
     opacity: 0.8;
     content: '';
@@ -17,7 +18,7 @@ export const Wrapper = styled.div`
     left: 0;
     height: 100%;
     width: 100%;
-  }
+  } */
 `;
 
 export const Container = styled.div`

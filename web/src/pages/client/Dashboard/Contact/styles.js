@@ -33,11 +33,19 @@ export const Container = styled.div`
       text-align: center;
     }
 
-    p {
+    span {
       display: flex;
-      color: #f7eb04;
       justify-content: center;
-      cursor: pointer;
+
+      p {
+        color: #f7eb04;
+        cursor: pointer;
+        transition: color 0.5s;
+
+        :hover {
+          color: #54dc54;
+        }
+      }
 
       svg {
         color: #54dc54;
@@ -62,9 +70,10 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     padding: 20px;
+    width: 290px;
 
     input {
-      width: 230px;
+      width: 100%;
       height: 30px;
       padding-left: 5px;
       color: #333;
@@ -77,20 +86,15 @@ export const Container = styled.div`
 
     .contact {
       display: flex;
-      width: 230px;
       justify-content: space-between;
 
       > input {
-        width: 115px;
-
-        & + input {
-          margin-left: 1px;
-        }
+        width: 123px;
       }
     }
 
     textarea {
-      width: 230px;
+      width: 100%;
       height: 70px;
       padding-left: 5px;
       color: #333;

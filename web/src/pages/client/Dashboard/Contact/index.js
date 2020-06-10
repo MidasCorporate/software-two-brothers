@@ -26,12 +26,14 @@ function Contact() {
     <Wrapper>
       <Container>
         <div className="row">
-          <strong className="title">Você tem alguma dúvida?</strong>
+          <strong className="title" id="contatos">
+            Você tem alguma dúvida?
+          </strong>
           <strong>Sinta-se livre para nos contatar!</strong>
-          <p>
+          <span>
             <FaWhatsapp size={18} />
-            (67) 9 9840-8117
-          </p>
+            <p>(67) 9 9840-8117</p>
+          </span>
         </div>
         <Form onSubmit={handleSubmit}>
           <div>

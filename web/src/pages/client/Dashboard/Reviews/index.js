@@ -11,34 +11,37 @@ function Reviews() {
         </Title>
         <Content>
           <Review>
-            <div>
-              <p>
-                Excelente serviço meu porshe ficou zero, recomendo para todos.
-                sucesso twobrothers
-              </p>
-            </div>
-            <strong>Alessandro Silva</strong>
-            <p>1h atrás</p>
+            <span>
+              <div>
+                <p>
+                  Excelente serviço meu porshe ficou zero, recomendo para todos,
+                  sucesso twobrothers
+                </p>
+              </div>
+              <strong>Alessandro Silva</strong>
+              <p>1h atrás</p>
+            </span>
           </Review>
           <Review>
-            <div>
-              <p>
-                Excelente serviço meu porshe ficou zero, recomendo para todos.
-                sucesso twobrothers
-              </p>
-            </div>
-            <strong>Alessandro Silva</strong>
-            <p>1h atrás</p>
+            <span>
+              <div>
+                <p>Excelente serviço meu porshe ficou zero</p>
+              </div>
+              <strong>Alessandro Silva</strong>
+              <p>1h atrás</p>
+            </span>
           </Review>
           <Review>
-            <div>
-              <p>
-                Excelente serviço meu porshe ficou zero, recomendo para todos.
-                sucesso twobrothers
-              </p>
-            </div>
-            <strong>Alessandro Silva</strong>
-            <p>09 junho, 2020</p>
+            <span>
+              <div>
+                <p>
+                  Excelente serviço meu porshe ficou zero, recomendo para todos,
+                  sucesso twobrothers
+                </p>
+              </div>
+              <strong>Alessandro Silva</strong>
+              <p>1h atrás</p>
+            </span>
           </Review>
         </Content>
       </Container>
