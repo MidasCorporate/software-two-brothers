@@ -1,13 +1,28 @@
 import styled from 'styled-components';
+import testimonial from '~/assets/testimonial_bg.jpg';
+import portfolio from '~/assets/portfolio_bg.jpg';
 
 export const Wrapper = styled.div`
-  width: 100%;
+  /* background: url(${testimonial}) no-repeat scroll 0 0;
+  background-size: cover;
+  position: relative; */
   background: #f6f6f6;
+  padding-bottom: 45px;
+
+  /* ::before {
+    background: #f6f6f6;
+    opacity: 0.8;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  } */
 `;
 
 export const Container = styled.div`
-  /* display: flex; */
-  /* align-items: center; */
+  position: relative;
 `;
 
 export const Title = styled.div`
@@ -17,6 +32,8 @@ export const Title = styled.div`
   justify-content: center;
   h2 {
     margin-bottom: 30px;
+    color: #333;
+    font-size: 24px;
   }
 `;
 
@@ -27,14 +44,13 @@ export const Content = styled.div`
 
 export const Grid = styled.div`
   display: grid;
-  /* grid-template-columns: repeat(8, 1fr); */
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(180px, auto));
   grid-gap: 10px;
-  margin: 0 80px;
+  justify-content: center;
 
   @media (max-width: 1360px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    margin: 0 40px;
+    grid-template-columns: repeat(auto-fill, minmax(180px, auto));
+    justify-content: center;
   }
 `;
 
@@ -44,18 +60,31 @@ export const Service = styled.div`
   height: 246px;
   flex-direction: column;
   padding: 20px;
-  background: #f6d001;
+  background: url(${portfolio}) no-repeat scroll 0 0;
+  position: relative;
+  background-size: cover;
+  /* background: #f6d001; */
   margin-bottom: 10px;
   border-radius: 4px;
   justify-content: space-around;
   align-items: center;
 
+  ::before {
+    content: '';
+    position: absolute;
+    background: rgba(255, 203, 15, 0.83);
+    width: 100%;
+    height: 100%;
+  }
+
   img {
+    position: relative;
     width: 91px;
     border-radius: 4px;
   }
 
   strong {
+    position: relative;
     display: flex;
     font-size: 22px;
     color: #000;

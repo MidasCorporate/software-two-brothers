@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const About = styled.div`
-  padding: 40px 0;
+  padding: 40px 0 70px 0;
   background: #f6f6f6;
 `;
 
@@ -26,6 +26,7 @@ export const SectionTitle = styled.div`
   text-align: center;
   padding: 30px 0;
   h2 {
+    color: #333;
     margin-bottom: 30px;
   }
 `;
@@ -80,6 +81,11 @@ export const Description = styled.div`
   margin-left: 20%;
   margin-top: 10px;
   h4 {
+    color: #555;
     margin-top: 20px;
+  }
+
+  p {
+    color: #777;
   }
 `;

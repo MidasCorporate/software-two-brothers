@@ -4,8 +4,6 @@ export const Wrapper = styled.section`
   width: 100%;
   background: #333;
   padding: 27px 0 32px;
-  /* align-items: center;
-  justify-content: center; */
 `;
 
 export const Container = styled.div`
@@ -35,6 +33,28 @@ export const Container = styled.div`
       text-align: center;
     }
 
+    span {
+      display: flex;
+      justify-content: center;
+
+      p {
+        color: #f7eb04;
+        cursor: pointer;
+        transition: color 0.5s;
+
+        :hover {
+          color: #54dc54;
+        }
+      }
+
+      svg {
+        color: #54dc54;
+        margin-right: 5px;
+        width: 20px;
+        justify-self: center;
+      }
+    }
+
     @media (max-width: 665px) {
       .title {
         font-size: 24px;
@@ -49,16 +69,11 @@ export const Container = styled.div`
   form {
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-    /* justify-content: center; */
     padding: 20px;
+    width: 290px;
 
-    div {
-      /* display: flex;
-      flex-direction: row; */
-    }
     input {
-      width: 230px;
+      width: 100%;
       height: 30px;
       padding-left: 5px;
       color: #333;
@@ -69,8 +84,17 @@ export const Container = styled.div`
       background: #f6f6f6;
     }
 
+    .contact {
+      display: flex;
+      justify-content: space-between;
+
+      > input {
+        width: 123px;
+      }
+    }
+
     textarea {
-      width: 230px;
+      width: 100%;
       height: 70px;
       padding-left: 5px;
       color: #333;
@@ -79,11 +103,10 @@ export const Container = styled.div`
       margin: 5px 0;
       border-radius: 4px;
       background: #f6f6f6;
+      padding-top: 5px;
     }
 
     button {
-      /* align-items: center;
-      justify-content: center; */
       height: 30px;
       background: #f7eb04;
       border: none;

@@ -118,3 +118,18 @@ export const Coll = styled.div`
 export const Maps = styled.div`
   /* z-index: 3; */
 `;
+
+export const Footer = styled.footer`
+  div {
+    display: flex;
+    justify-content: center;
+    color: #666;
+    background: #f6d001;
+    padding: 25px 10px;
+  }
+
+  strong {
+    color: #333;
+    margin-right: 5px;
+  }
+`;
