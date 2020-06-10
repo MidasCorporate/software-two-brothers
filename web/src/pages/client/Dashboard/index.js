@@ -1,6 +1,8 @@
 import React from 'react';
 import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 
+import { Link } from 'react-router-dom';
+
 import { Intro, IntroBody, Container, Row, Coll, Maps, Footer } from './styles';
 import logo from '~/assets/logo.png';
 import Service from './Services';
@@ -55,7 +57,10 @@ function Dashboard({ google }) {
         <span>
           <div>
             <strong>Two Brothers &copy;</strong>
-            2020 - Todos os direitos reservados
+            2020 - Todos os direitos reservados -
+            <strong>
+              <Link to="/adm">Acessar</Link>
+            </strong>
           </div>
         </span>
       </Footer>
