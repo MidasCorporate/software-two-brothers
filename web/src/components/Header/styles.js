@@ -10,16 +10,6 @@ export const Container = styled.div`
   z-index: 2;
 `;
 
-// export const StyledLink = styled(NavLink).attrs({ activeClassName: 'visited' })`
-//   color: #999;
-//   text-transform: uppercase;
-//   font-weight: bold;
-//   transition: color 0.5s;
-//   &:hover {
-//     color: #444;
-//   }
-// `;
-
 export const Content = styled.header`
   height: 64px;
   display: flex;
@@ -30,20 +20,6 @@ export const Content = styled.header`
   nav {
     display: flex;
     align-items: center;
-
-    ${(props) =>
-      props.open &&
-      css`
-        display: flex;
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: rgba(255, 255, 255, 0.9);
-        flex-direction: column;
-        justify-content: center;
-      `}
 
     .logo {
       display: flex;
@@ -65,6 +41,20 @@ export const Content = styled.header`
       list-style: none;
       margin: 0;
       padding: 0;
+
+      ${(props) =>
+        props.open &&
+        css`
+          display: flex;
+          position: fixed;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: rgba(255, 255, 255, 0.9);
+          flex-direction: column;
+          justify-content: center;
+        `}
 
       li {
         text-transform: uppercase;

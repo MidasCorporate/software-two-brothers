@@ -32,19 +32,21 @@ function Contact() {
           <strong>Sinta-se livre para nos contatar!</strong>
           <span>
             <FaWhatsapp size={18} />
-            <p>(67) 9 9840-8117</p>
+            <a href="https://api.whatsapp.com/send?phone=5567998408117">
+              (67) 9 9840-8117
+            </a>
           </span>
         </div>
         <Form onSubmit={handleSubmit}>
           <div>
-            <Input name="name" placeholder="nome" />
+            <Input name="name" placeholder="Nome" />
           </div>
           <div>
             <Input name="email" type="email" placeholder="E-mail" />
           </div>
           <div className="contact">
-            <Input name="cel" placeholder="celular" />
-            <Input name="tel" placeholder="telefone" />
+            <Input name="cel" placeholder="Celular" />
+            <Input name="tel" placeholder="Telefone" />
           </div>
           <div>
             <Textarea name="message" placeholder="Messagem" />

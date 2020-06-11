@@ -21,7 +21,7 @@ function Dashboard({ google }) {
   return (
     <>
       <Header />
-      <Intro>
+      <Intro id="inicio">
         <IntroBody>
           <Container>
             <Row>

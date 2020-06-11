@@ -37,7 +37,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: center;
 
-      p {
+      a {
         color: #f7eb04;
         cursor: pointer;
         transition: color 0.5s;
@@ -104,6 +104,7 @@ export const Container = styled.div`
       border-radius: 4px;
       background: #f6f6f6;
       padding-top: 5px;
+      resize: none;
     }
 
     button {

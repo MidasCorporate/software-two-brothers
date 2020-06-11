@@ -43,7 +43,7 @@ function Header() {
           </Link>
           <ul open={open}>
             <li>
-              <Link to="/">INÍCIO</Link>
+              <a href="#inicio">INÍCIO</a>
             </li>
             <li>
               <a href="#sobre">SOBRE</a>
