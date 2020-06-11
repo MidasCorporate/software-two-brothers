@@ -55,14 +55,16 @@ function Header() {
               <a href="#contatos">CONTATOS</a>
             </li>
           </ul>
-          <button className="menu" type="button" onClick={handleToggle}>
-            <div className="iconMenu">
-              <span>
-                <span />
-              </span>
-            </div>
-            <strong>MENU</strong>
-          </button>
+          <div className="menu-section on">
+            <button className="menu" type="button" onClick={handleToggle}>
+              <div className="icon-menu">
+                <div className="one" />
+                <div className="two" />
+                <div className="three" />
+              </div>
+              <strong>MENU</strong>
+            </button>
+          </div>
         </nav>
 
         <aside>

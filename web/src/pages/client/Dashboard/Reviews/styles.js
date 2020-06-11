@@ -3,26 +3,17 @@ import testimonial from '~/assets/testimonial_bg.jpg';
 import portfolio from '~/assets/portfolio_bg.jpg';
 
 export const Wrapper = styled.section`
-  /* background: url(${testimonial}) no-repeat scroll 0 0;
-  background-size: cover;
-  position: relative; */
+  width: 100%;
   background: #f6f6f6;
   padding-bottom: 45px;
-
-  /* ::before {
-    background: #f6f6f6;
-    opacity: 0.8;
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  } */
 `;
 
 export const Container = styled.div`
-  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 `;
 
 export const Title = styled.div`
@@ -38,26 +29,28 @@ export const Title = styled.div`
 `;
 
 export const Content = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370px, auto));
+  grid-gap: 10px;
   justify-content: center;
-  text-align: center;
-  /* position: relative; */
+  align-items: center;
+
+  /* @media (max-width: 700px) {
+    flex-direction: column;
+  } */
 `;
 
 export const Review = styled.div`
   width: 370px;
   height: 270px;
-  /* height: 50.333%; */
   background: url(${testimonial}) no-repeat scroll 0 0;
   position: relative;
   background-size: cover;
-
   border-radius: 4px;
 
   ::before {
     content: '';
     position: absolute;
-    /* background: rgba(255, 255, 255, 0.95); */
     width: 100%;
     height: 100%;
     top: 0;

@@ -47,6 +47,7 @@ export const Grid = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(180px, auto));
   grid-gap: 10px;
   justify-content: center;
+  align-items: center;
 
   @media (max-width: 1360px) {
     grid-template-columns: repeat(auto-fill, minmax(180px, auto));
