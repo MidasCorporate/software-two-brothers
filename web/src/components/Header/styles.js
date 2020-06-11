@@ -122,6 +122,7 @@ export const Content = styled.header`
       height: 5px;
       width: 100%;
       border-radius: 20px;
+      transition-duration: 0.3s;
 
       & + div {
       margin: 6px auto;
@@ -141,21 +142,35 @@ export const Content = styled.header`
       left: 0;
       width: 100vw;
       height: 100vh;
+      background: rgba(51, 51, 51, 0.9);
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      background: #333;
     }
 
-    nav ul {
+    .menu-section.on ul {
       display: block;
-      z-index: 1;
+      /* z-index: 1; */
+      text-align: center;
+      /* justify-content: center; */
+
+      a {
+        transition-duration: 0.5s;
+        font-size: 28px;
+        line-height: 4rem;
+        display: block;
+      }
+
     }
+
+
 
     .menu-section.on .menu {
-      /* display: flex; */
       position: absolute;
-      /* left: 0; */
-
-      top: 15px;
+      left: 0;
+      top: 17px;
+      margin-left: 92px;
     }
 
     .menu-section.on .menu .one {
@@ -167,7 +182,11 @@ export const Content = styled.header`
     }
 
     .menu-section.on .menu .three {
-      transform: rotate(-45deg) translate(8px, -10px);
+      transform: rotate(-45deg) translate(8px, -9px);
+    }
+
+    .menu-section.on ul li + li {
+    margin-left: 0px;
     }
   }
 

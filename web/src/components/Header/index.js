@@ -31,7 +31,16 @@ function Header() {
   });
 
   function handleToggle() {
+    const menuSection = document.querySelector('.menu-section');
+
+    menuSection.classList.toggle('on', open);
     setOpen(!open);
+  }
+
+  function handleClosed() {
+    const menuSection = document.querySelector('.menu-section');
+
+    menuSection.classList.toggle('on', false);
   }
 
   return (
@@ -41,21 +50,29 @@ function Header() {
           <Link to="/" className="logo">
             <img src={logo} alt="twobrothers" />
           </Link>
-          <ul open={open}>
-            <li>
-              <a href="#inicio">INÍCIO</a>
-            </li>
-            <li>
-              <a href="#sobre">SOBRE</a>
-            </li>
-            <li>
-              <a href="#servicos">SERVIÇOS</a>
-            </li>
-            <li>
-              <a href="#contatos">CONTATOS</a>
-            </li>
-          </ul>
-          <div className="menu-section on">
+          <div className="menu-section">
+            <ul>
+              <li>
+                <a href="#inicio" onClick={handleClosed}>
+                  INÍCIO
+                </a>
+              </li>
+              <li>
+                <a href="#sobre" onClick={handleClosed}>
+                  SOBRE
+                </a>
+              </li>
+              <li>
+                <a href="#servicos" onClick={handleClosed}>
+                  SERVIÇOS
+                </a>
+              </li>
+              <li>
+                <a href="#contatos" onClick={handleClosed}>
+                  CONTATOS
+                </a>
+              </li>
+            </ul>
             <button className="menu" type="button" onClick={handleToggle}>
               <div className="icon-menu">
                 <div className="one" />
