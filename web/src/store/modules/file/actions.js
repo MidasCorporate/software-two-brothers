@@ -11,3 +11,10 @@ export function uploadSucess(url) {
     payload: { url },
   };
 }
+
+export function updateBanner(id) {
+  return {
+    type: '@file/SAVE_IN_REQUEST',
+    payload: { id },
+  };
+}

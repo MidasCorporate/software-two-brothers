@@ -1,7 +1,7 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React, { useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 import { Form } from '@unform/web';
 import {
@@ -11,6 +11,7 @@ import {
   MdRemoveRedEye,
   MdReply,
 } from 'react-icons/md';
+import { updateBanner } from '~/store/modules/file/actions';
 
 import BannerInput from './BannerInput';
 
@@ -28,6 +29,7 @@ import {
 } from '../styles/styles';
 
 function Banner() {
+  const dispatch = useDispatch();
   const { url } = useSelector((state) => state.file);
   const [files, setItem] = useState([]);
 
@@ -51,9 +53,9 @@ function Banner() {
     setTagWindow(!tagWindow);
   }
 
-  // function handleSelectImage() {
-  //   setSelectedImage(!selectedImage);
-  // }
+  function handleSave() {
+    dispatch(updateBanner(selectedItems));
+  }
 
   function handleSelectItem(id) {
     const alreadySelected = selectedItems.findIndex((item) => item === id);
@@ -166,7 +168,7 @@ function Banner() {
         </Form>
         <DivButton>
           <BannerInput />
-          <button className="btn btn1" type="button">
+          <button onClick={handleSave} className="btn btn1" type="button">
             <strong>Salvar</strong>
           </button>
           {/* <button type="button">Cancelar</button> */}

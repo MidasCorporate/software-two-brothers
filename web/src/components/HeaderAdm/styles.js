@@ -57,4 +57,9 @@ export const Profile = styled.div`
     border-radius: 50%;
     color: #333;
   }
+  button {
+    border: none;
+    background: none;
+    font-weight: 800;
+  }
 `;
