@@ -8,7 +8,7 @@ import { Container, Content } from './styles';
 
 function Header() {
   const [headerColor, setHeaderColor] = useState(false);
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
     const updateNavbarColor = () => {
@@ -41,6 +41,7 @@ function Header() {
     const menuSection = document.querySelector('.menu-section');
 
     menuSection.classList.toggle('on', false);
+    setOpen(!open);
   }
 
   return (

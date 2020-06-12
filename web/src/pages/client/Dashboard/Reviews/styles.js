@@ -30,7 +30,7 @@ export const Title = styled.div`
 
 export const Content = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(370px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(420px, auto));
   grid-gap: 10px;
   justify-content: center;
   align-items: center;

@@ -1,9 +1,9 @@
 import React from 'react';
-import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
+import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 
 import { Link } from 'react-router-dom';
 
-import { Intro, IntroBody, Container, Row, Coll, Maps, Footer } from './styles';
+import { Intro, IntroBody, Container, Row, Coll, Footer } from './styles';
 import logo from '~/assets/logo.png';
 import Service from './Services';
 import AboutClient from '~/pages/client/Dashboard/About';
@@ -11,13 +11,13 @@ import Reviews from '~/pages/client/Dashboard/Reviews';
 import Contact from '~/pages/client/Dashboard/Contact';
 import Header from '~/components/Header';
 
-function Dashboard({ google }) {
-  const mapStyles = {
-    zIndex: '4',
-    width: '100%',
-    height: '65%',
-  };
+import '~/styles/leaflet.css';
 
+function Dashboard() {
+  const position = {
+    lat: -19.3949988,
+    lng: -54.5728501,
+  };
   return (
     <>
       <Header />
@@ -42,16 +42,18 @@ function Dashboard({ google }) {
       <AboutClient />
       <Service />
       <Reviews />
-      {/* <Maps>
-        <Map
-          google={google}
-          zoom={18}
-          style={mapStyles}
-          initialCenter={{ lat: -19.3949988, lng: -54.5728501 }}
-        >
-          <Marker position={{ lat: -19.3949988, lng: -54.5728501 }} />
-        </Map>
-      </Maps> */}
+      <Map center={position} zoom={18}>
+        <TileLayer
+          attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        <Marker position={position}>
+          <Popup>
+            <strong>Two Brothers</strong> <br /> o melhor tratamento para seu
+            veiculo.
+          </Popup>
+        </Marker>
+      </Map>
       <Contact />
       <Footer>
         <span>
@@ -68,6 +70,4 @@ function Dashboard({ google }) {
   );
 }
 
-export default GoogleApiWrapper({
-  apiKey: 'AIzaSyDYV8FMHShBUmViNIIUeytw91GgiutPZOM',
-})(Dashboard);
+export default Dashboard;
