@@ -52,17 +52,17 @@ function Header() {
                 </a>
               </li>
               <li>
-                <a href="#sobre" onClick={handleToggle}>
+                <a href="#sobre" onClick={() => handleToggle([])}>
                   SOBRE
                 </a>
               </li>
               <li>
-                <a href="#servicos" onClick={handleToggle}>
+                <a href="#servicos" onClick={() => handleToggle([])}>
                   SERVIÇOS
                 </a>
               </li>
               <li>
-                <a href="#contatos" onClick={handleToggle}>
+                <a href="#contatos" onClick={() => handleToggle([])}>
                   CONTATOS
                 </a>
               </li>

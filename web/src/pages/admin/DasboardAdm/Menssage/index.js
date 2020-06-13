@@ -42,20 +42,45 @@ function Post() {
         <Close>
           <MdCancel color="red" size={20} onClick={() => handleWindow([])} />
         </Close>
-        <Form>
-          {/* <h2>
-            Edite aqui o campo Sobre nós, para dizer melhor aos seus clientes,
-            para eles saberem um pouco mais sobre wifgwlfbdskaçfuwieb
-          </h2> */}
-
-          <Textarea rows="20" cols="80" maxLength="500" name="response" />
-        </Form>
-        <DivButton>
-          <button className="btn btn1" type="button">
-            <strong>Salvar</strong>
-          </button>
-          {/* <button type="button">Cancelar</button> */}
-        </DivButton>
+        <table>
+          <tbody>
+            <tr>
+              <td>Two Brothers</td>
+              <td>two@brothers.com</td>
+              <td>010102010100</td>
+              <td>110101101021</td>
+              <td>quantos custa para polir um golf</td>
+            </tr>
+            <tr>
+              <td>Two Brothers</td>
+              <td>two@brothers.com</td>
+              <td>010102010100</td>
+              <td>110101101021</td>
+              <td>quantos custa para polir um golf</td>
+            </tr>
+            <tr>
+              <td>Two Brothers</td>
+              <td>two@brothers.com</td>
+              <td>010102010100</td>
+              <td>110101101021</td>
+              <td>quantos custa para polir um golf</td>
+            </tr>
+            <tr>
+              <td>Two Brothers</td>
+              <td>two@brothers.com</td>
+              <td>010102010100</td>
+              <td>110101101021</td>
+              <td>quantos custa para polir um golf</td>
+            </tr>
+            <tr>
+              <td>Two Brothers</td>
+              <td>two@brothers.com</td>
+              <td>010102010100</td>
+              <td>110101101021</td>
+              <td>quantos custa para polir um golf</td>
+            </tr>
+          </tbody>
+        </table>
       </WindowMessage>
     </>
   );

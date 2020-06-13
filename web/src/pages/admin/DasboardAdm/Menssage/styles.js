@@ -11,7 +11,6 @@ export const CardButton = styled.button`
   padding: 20px;
   transition: background 0.5s;
   border: none;
-  /* transition: border-bottom 0.5s ease-out; */
 
   span {
     > div {
@@ -40,7 +39,6 @@ export const CardHeader = styled.header`
   margin-top: -45px;
   margin-left: -10px;
   background: red;
-  /* position: absolute; */
   padding: 5px;
   border-radius: 4px;
 `;
@@ -59,30 +57,21 @@ export const CardBody = styled.div`
 `;
 
 export const WindowMessage = styled.div`
-  /* display: none; */
   background-color: #fff;
   border: 2px solid red;
   color: #999;
   padding: 50px 25px 100px 25px;
   border-radius: 4px;
-  /* margin-top: 40px; */
   margin-left: 45px;
   z-index: 1;
   display: ${(props) => (props.tag ? 'flex' : 'none')};
   align-items: center;
   text-align: center;
   flex-direction: column;
-  /* opacity: 0.9; */
   position: absolute;
   width: 50%;
   max-height: 600px;
-  /* overflow: auto; */
   animation: slide-mensagem 1s;
-
-  /* @media all and (max-height: 768px) {
-    #divContent{
-     overflow:auto;
-    } */
 
   @keyframes slide-mensagem {
     from {
@@ -112,7 +101,8 @@ export const WindowMessage = styled.div`
 
 export const Close = styled.div`
   position: absolute;
-  margin-top: -25px;
+  top: 0;
+  left: 0;
 
   svg {
     cursor: pointer;
@@ -121,42 +111,21 @@ export const Close = styled.div`
 `;
 
 export const WindowBannerImg = styled.div`
-  /* display: none; */
   background-color: #fff;
   border: 2px solid red;
   color: #999;
   padding: 50px 25px 100px 25px;
   border-radius: 4px;
-  /* margin-top: 40px; */
   margin-left: 45px;
   z-index: 1;
   display: ${(props) => (props.tag ? 'flex' : 'none')};
   align-items: center;
   text-align: center;
   flex-direction: column;
-  /* opacity: 0.9; */
   position: absolute;
   width: 50%;
   max-height: 600px;
-  /* overflow: auto; */
   animation: slide-mensagem 1s;
-
-  /* @media all and (max-height: 768px) {
-    #divContent{
-     overflow:auto;
-    } */
-
-  /* @keyframes slide-mensagem {
-    from {
-      transform: translate3d(0px, -100px, 0px);
-      opacity: 0;
-    }
-
-    to {
-      transform: translate3d(0px, 0px, 0px);
-      opacity: 1;
-    }
-  } */
 
   textarea {
     margin-top: 80px;
@@ -200,7 +169,6 @@ export const WindowBannerImg = styled.div`
     border-radius: 4px;
     max-height: 400px;
     overflow: auto;
-    /* position: relative; */
   }
 `;
 
@@ -217,7 +185,6 @@ export const DivButton = styled.div`
     cursor: pointer;
     margin: 10px;
     transition: 0.8s;
-    /* flex-direction: row */
     overflow: hidden;
     position: relative;
   }
@@ -227,7 +194,6 @@ export const DivButton = styled.div`
   .btn1:hover {
     strong {
       color: #fff;
-      /* z-index: 1; */
       position: relative;
     }
   }
@@ -237,7 +203,6 @@ export const DivButton = styled.div`
   .btn2:hover {
     strong {
       color: #fff;
-      /* z-index: 1; */
       position: relative;
     }
   }
@@ -248,7 +213,6 @@ export const DivButton = styled.div`
     width: 100%;
     height: 0%;
     background: red;
-    /* z-index: 1; */
     transition: 0.8s;
     top: 0;
     border-radius: 0 0 50% 50%;

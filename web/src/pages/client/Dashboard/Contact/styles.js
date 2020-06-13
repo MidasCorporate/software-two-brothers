@@ -1,9 +1,13 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.section`
+  display: flex;
   width: 100%;
+  height: 400px;
   background: #333;
   padding: 27px 0 32px;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Information = styled.div`

@@ -4,7 +4,7 @@ import testimonial from '~/assets/testimonial_bg.jpg';
 export const Wrapper = styled.section`
   width: 100%;
   background: #f6f6f6;
-  padding-bottom: 45px;
+  padding-bottom: 90px;
 `;
 
 export const Container = styled.div`

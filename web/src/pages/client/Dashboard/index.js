@@ -133,7 +133,8 @@ function Dashboard() {
       <AboutClient />
       <Service />
       <Reviews />
-      <Map scrollWheelZoom={false} center={position} zoom={18}>
+      <Contact />
+      <Map scrollWheelZoom={false} center={position} zoom={15}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -145,14 +146,13 @@ function Dashboard() {
           </Popup>
         </Marker>
       </Map>
-      <Contact />
       <Footer>
         <span>
           <div>
             <strong>Two Brothers &copy;</strong>
             2020 - Todos os direitos reservados -
             <strong>
-              <Link to="/adm">Acessar</Link>
+              <a href="/adm">Acessar</a>
             </strong>
           </div>
         </span>
