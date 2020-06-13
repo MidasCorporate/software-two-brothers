@@ -60,7 +60,7 @@ export const WindowMessage = styled.div`
   background-color: #fff;
   border: 2px solid red;
   color: #999;
-  padding: 50px 25px 100px 25px;
+  padding: 50px 25px 10px 25px;
   border-radius: 4px;
   margin-left: 45px;
   z-index: 1;
@@ -85,17 +85,35 @@ export const WindowMessage = styled.div`
     }
   }
 
-  textarea {
-    margin-top: 80px;
-  }
+  fieldset {
+    /* width: 100%;
+    height: 100%; */
+    overflow: auto;
 
-  h2 {
-    height: 40px;
-  }
+    table {
+      width: 100%;
+      /* display: flex;
+    flex: 1; */
 
-  img {
-    width: 120px;
-    border-radius: 4px;
+      tbody {
+        display: flex;
+        flex-direction: column;
+
+        tr {
+          padding: 5px 0;
+          background: #f6f6f6;
+          margin: 5px 0;
+          border-radius: 4px;
+          color: #333;
+          td {
+            margin-left: 15px;
+            & + td {
+              padding-left: 15px;
+            }
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -107,128 +125,5 @@ export const Close = styled.div`
   svg {
     cursor: pointer;
     margin: none;
-  }
-`;
-
-export const WindowBannerImg = styled.div`
-  background-color: #fff;
-  border: 2px solid red;
-  color: #999;
-  padding: 50px 25px 100px 25px;
-  border-radius: 4px;
-  margin-left: 45px;
-  z-index: 1;
-  display: ${(props) => (props.tag ? 'flex' : 'none')};
-  align-items: center;
-  text-align: center;
-  flex-direction: column;
-  position: absolute;
-  width: 50%;
-  max-height: 600px;
-  animation: slide-mensagem 1s;
-
-  textarea {
-    margin-top: 80px;
-  }
-
-  h2 {
-    height: 40px;
-  }
-
-  img {
-    width: 120px;
-    border-radius: 4px;
-    cursor: pointer;
-
-    @keyframes slide-mensagem {
-      from {
-        transform: translate3d(0px, -5px, 0px);
-        opacity: 0;
-      }
-
-      to {
-        transform: translate3d(0px, 0px, 0px);
-        opacity: 1;
-      }
-    }
-  }
-
-  a {
-    z-index: 1;
-  }
-
-  button {
-    border: none;
-    background: none;
-    margin: 10px;
-  }
-
-  fieldset {
-    display: flex;
-    align-items: center;
-    border-radius: 4px;
-    max-height: 400px;
-    overflow: auto;
-  }
-`;
-
-export const DivButton = styled.div`
-  text-align: center;
-  margin-left: -100px;
-
-  .btn {
-    border: 1px solid red;
-    border-radius: 4px;
-    background: none;
-    padding: 10px 20px;
-    font-size: 20px;
-    cursor: pointer;
-    margin: 10px;
-    transition: 0.8s;
-    overflow: hidden;
-    position: relative;
-  }
-  .btn1 {
-    color: red;
-  }
-  .btn1:hover {
-    strong {
-      color: #fff;
-      position: relative;
-    }
-  }
-  .btn2 {
-    color: red;
-  }
-  .btn2:hover {
-    strong {
-      color: #fff;
-      position: relative;
-    }
-  }
-  .btn::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    width: 100%;
-    height: 0%;
-    background: red;
-    transition: 0.8s;
-    top: 0;
-    border-radius: 0 0 50% 50%;
-  }
-  .btn1::before {
-    top: 0;
-    border-radius: 0 0 50% 50%;
-  }
-  .btn1:hover::before {
-    height: 180%;
-  }
-  .btn2::before {
-    top: 0;
-    border-radius: 0 0 50% 50%;
-  }
-  .btn2:hover::before {
-    height: 180%;
   }
 `;
