@@ -45,12 +45,7 @@ export const Content = styled.div`
     border-radius: 4px;
     padding: 4px;
   }
-  span {
-    color: #b80404;
-    font-weight: bold;
-    margin-top: 10px;
-    align-self: center;
-  }
+
   button {
     margin-top: 30px;
     background: #f7eb06;
@@ -65,17 +60,6 @@ export const Content = styled.div`
     &:hover {
       background: ${darken(0.1, '#f7eb06')};
       color: #eee;
-    }
-  }
-
-  a {
-    color: #b80404;
-    margin-top: 20px;
-    font-size: 15px;
-    font-weight: bold;
-    opacity: 0.6;
-    &:hover {
-      opacity: 1;
     }
   }
 `;

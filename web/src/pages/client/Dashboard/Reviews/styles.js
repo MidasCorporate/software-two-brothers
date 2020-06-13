@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import testimonial from '~/assets/testimonial_bg.jpg';
-import portfolio from '~/assets/portfolio_bg.jpg';
 
 export const Wrapper = styled.section`
   width: 100%;
@@ -34,10 +33,6 @@ export const Content = styled.div`
   grid-gap: 10px;
   justify-content: center;
   align-items: center;
-
-  /* @media (max-width: 700px) {
-    flex-direction: column;
-  } */
 `;
 
 export const Review = styled.div`
@@ -93,7 +88,7 @@ export const Review = styled.div`
     strong {
       display: block;
       position: relative;
-      /* margin: 3px 0; */
+
       color: #f6d001;
       font-size: 13px;
     }

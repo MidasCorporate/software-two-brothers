@@ -3,11 +3,9 @@ import { Switch } from 'react-router-dom';
 import Route from './Route';
 
 import SingnIn from '../pages/SignIn';
-// import SignUp from '../pages/Singup';
 
 import DashboardClient from '../pages/client/Dashboard';
 import DashboardAdm from '../pages/admin/DasboardAdm';
-// import Profile from '../pages/Profile';
 
 export default function Routes() {
   return (

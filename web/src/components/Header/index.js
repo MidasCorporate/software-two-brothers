@@ -37,13 +37,6 @@ function Header() {
     setOpen(!open);
   }
 
-  // function handleClosed() {
-  //   const menuSection = document.querySelector('.menu-section');
-
-  //   menuSection.classList.toggle('on', false);
-  //   setOpen(!open);
-  // }
-
   return (
     <Container headerColor={headerColor}>
       <Content>

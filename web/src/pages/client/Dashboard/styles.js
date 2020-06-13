@@ -10,11 +10,6 @@ export const Intro = styled.div`
   color: #fff;
 
   background-color: #000;
-
-  /* @media (min-width: 1010px) {
-    height: 100%; */
-  /* padding: 100px 0; */
-  /* } */
 `;
 
 export const Banner = styled.div`
@@ -202,7 +197,6 @@ export const DivBottomBanner = styled.div`
       color: #999;
     }
     :hover {
-      /* background: rgba(255, 255, 255, 0.2); */
       svg {
         width: 80px;
         height: 80px;

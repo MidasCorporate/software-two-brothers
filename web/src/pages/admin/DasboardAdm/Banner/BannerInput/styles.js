@@ -13,7 +13,7 @@ export const Container = styled.div`
     cursor: pointer;
     margin: 10px;
     transition: 0.8s;
-    /* flex-direction: row */
+
     overflow: hidden;
     position: absolute;
   }
@@ -23,7 +23,7 @@ export const Container = styled.div`
   .btn1:hover {
     strong {
       color: #fff;
-      /* z-index: 1; */
+
       position: relative;
     }
   }
@@ -35,7 +35,7 @@ export const Container = styled.div`
     width: 100%;
     height: 0%;
     background: red;
-    /* z-index: 1; */
+
     transition: 0.8s;
     top: 0;
     border-radius: 0 0 50% 50%;

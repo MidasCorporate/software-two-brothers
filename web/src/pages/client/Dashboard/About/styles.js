@@ -42,11 +42,6 @@ export const Coll = styled.div`
   padding-right: 15px;
   padding-left: 15px;
 
-  /* img {
-    height: 220px;
-    width: 250px;
-  } */
-
   @media (max-width: 640px) {
     > div {
       display: block;
