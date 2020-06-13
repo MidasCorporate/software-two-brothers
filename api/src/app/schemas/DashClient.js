@@ -3,8 +3,16 @@ import mongoose from 'mongoose';
 const DashClientSchema = new mongoose.Schema(
   {
     file: {
-      type: Object,
+      type: Array,
       required: true,
+    },
+    opacity: {
+      type: Number,
+      required: false,
+    },
+    displayLogo: {
+      type: Boolean,
+      required: false,
     },
   },
   {

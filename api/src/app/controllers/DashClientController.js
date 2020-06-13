@@ -9,7 +9,8 @@ class ContactController {
   }
 
   async store(req, res) {
-    const { id } = req.body;
+    const { id, opacity, displayLogo } = req.body;
+
     const files = await File.find();
     // const CorrectFiles = await files.filter((file) => file.id === id.id);
 
@@ -21,8 +22,10 @@ class ContactController {
     //   url,
     // };
 
-    const listBanner = await DashClient.create({
+    const listBanner = await DashClient.updateOne({
       file,
+      opacity,
+      displayLogo,
     });
 
     // const { _id, url  } = listBanner
