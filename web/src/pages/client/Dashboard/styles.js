@@ -4,22 +4,70 @@ import backgroundImg from '~/assets/23.jpg';
 export const Intro = styled.div`
   display: table;
   width: 100%;
-  height: auto;
-  padding: 100px 0;
+  height: 800px;
+
   text-align: center;
   color: #fff;
-  background-image: url(${backgroundImg});
-  background-color: #000;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
 
-  @media (min-width: 768px) {
-    height: 100%;
-    padding: 0;
+  background-color: #000;
+
+  /* @media (min-width: 1010px) {
+    height: 100%; */
+  /* padding: 100px 0; */
+  /* } */
+`;
+
+export const Banner = styled.div`
+  position: relative;
+  animation-direction: alternate;
+
+  div {
+    position: absolute;
+
+    width: 100%;
+    height: 100vh;
+    padding: 100px 0;
+    background-position: 30% 45%;
+    background-size: cover;
+    background-image: ${(props) =>
+      props.urlImg ? `url(${props.urlImg})` : `url(${backgroundImg})`};
+    overflow: hidden;
+    filter: brightness(20%);
+    background-repeat: no-repeat;
+
+    animation: ${(props) => (props.tag ? 'div' : 'div2')} 3s forwards;
+  }
+
+  @keyframes div {
+    from {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 0;
+      width: 10px;
+    }
+
+    to {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 1;
+      width: 100%;
+    }
+  }
+
+  @keyframes div2 {
+    from {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 0;
+      width: 0;
+    }
+
+    to {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 1;
+      width: 100%;
+    }
   }
 `;
+
+export const Filter = styled.div``;
 
 export const IntroBody = styled.div`
   h1 {
@@ -99,6 +147,19 @@ export const Coll = styled.div`
   padding-right: 15px;
   padding-left: 15px;
   margin-left: 8.33333333%;
+
+  animation: div3 5s forwards;
+  @keyframes div3 {
+    from {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translate3d(0px, 0px, 0px);
+      opacity: 1;
+    }
+  }
 
   img {
     height: 220px;
