@@ -115,10 +115,6 @@ export const Coll = styled.div`
   }
 `;
 
-export const Maps = styled.div`
-  /* z-index: 3; */
-`;
-
 export const Footer = styled.footer`
   div {
     display: flex;

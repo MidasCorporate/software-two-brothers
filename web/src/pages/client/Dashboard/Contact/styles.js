@@ -6,6 +6,48 @@ export const Wrapper = styled.section`
   padding: 27px 0 32px;
 `;
 
+export const Information = styled.div`
+  display: flex;
+  width: 300px;
+  height: 200px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-right: 10px;
+
+  img {
+    width: 100px;
+    height: 100px;
+  }
+
+  h3 {
+    color: #f7eb04;
+    margin: 5px 0;
+
+    ::before {
+      content: '';
+      width: 75px;
+      height: 3px;
+      background-color: #f6f6f6;
+      display: block;
+      margin: 5px 0 5px 25px;
+    }
+
+    ::after {
+      content: '';
+      width: 75px;
+      height: 3px;
+      background-color: #f6f6f6;
+      display: block;
+      margin: 5px 0 5px 25px;
+    }
+  }
+
+  p {
+    color: #f6f6f6;
+  }
+`;
+
 export const Container = styled.div`
   display: flex;
   align-items: center;
@@ -27,7 +69,7 @@ export const Container = styled.div`
 
     strong {
       color: #f6f6f6;
-      padding: 10px 10px;
+      padding: 5px 10px;
       margin: 0;
       font-size: 24px;
       text-align: center;
@@ -37,6 +79,7 @@ export const Container = styled.div`
       display: flex;
       justify-content: center;
       align-items: center;
+      padding-top: 5px;
 
       a {
         color: #f7eb04;

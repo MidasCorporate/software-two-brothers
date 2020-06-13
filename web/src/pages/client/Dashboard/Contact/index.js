@@ -7,7 +7,8 @@ import api from '~/services/api';
 
 import Input from '~/components/Input';
 import Textarea from '~/components/Textarea';
-import { Wrapper, Container } from './styles';
+import { Wrapper, Information, Container } from './styles';
+import logo from '~/assets/logo.png';
 
 function Contact() {
   async function handleSubmit({ name, email, cel, tel, message }) {
@@ -25,6 +26,14 @@ function Contact() {
   return (
     <Wrapper>
       <Container>
+        <Information>
+          <img src={logo} alt="TwoBrothers" />
+          <h3>LOCALIZAÇÃO</h3>
+          <p>
+            Rua São Paulo, 1600, centro - São Gabriel do Oeste - MS - CEP:
+            79490-000
+          </p>
+        </Information>
         <div className="row">
           <strong className="title" id="contatos">
             Você tem alguma dúvida?
