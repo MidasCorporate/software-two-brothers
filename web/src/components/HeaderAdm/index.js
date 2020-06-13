@@ -29,7 +29,7 @@ export default function HeaderAdm() {
         <aside>
           <Profile>
             <div>
-              {/* <strong>{profile.name}</strong> */}
+              <strong>{profile.name}</strong>
               <button type="button" onClick={handleSignOut}>
                 Sair
               </button>

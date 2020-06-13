@@ -1,3 +1,4 @@
+/* eslint-disable no-shadow */
 import React, { useState, useEffect } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 // import * as L from 'leaflet';
@@ -38,19 +39,25 @@ function Dashboard() {
 
   const [number, setNumber] = useState();
   const [tag, setTag] = useState(false);
-  const [styleBanner, setStyleBanner] = useState([]);
+  const [opacity, setOpacity] = useState(true);
+  const [displayLogo, setDisplayLogo] = useState(true);
 
   useEffect(() => {
     async function loadBanner() {
       const response = await api.get('files/imgBanner');
       const { data } = response;
 
-      const [arrayImg] = data.map((item) => item.file);
-      // const urlUnic = arrayImg.map((item) => item.url);
-      // console.log(arrayImg[0].url);
-      setStyleBanner(data[0]);
-      // console.log(data[0].opacity);
-      setBannerCarrossel(arrayImg[0].url);
+      if (data.length > 0) {
+        const { file, opacity, displayLogo } = data[0];
+
+        const arrayImg = file.map((item) => item.url);
+        // const urlUnic = arrayImg.map((item) => item.url);
+
+        setOpacity(opacity);
+
+        setDisplayLogo(displayLogo);
+        setBannerCarrossel(arrayImg);
+      }
       setNumber(true);
     }
     loadBanner();
@@ -83,13 +90,13 @@ function Dashboard() {
     <>
       <Header />
       <Intro id="inicio">
-        <Banner opacity={styleBanner} tag={tag} urlImg={teste}>
+        <Banner opacity={opacity} tag={tag} urlImg={teste}>
           <div />
         </Banner>
         <IntroBody>
           <Container>
             <Row>
-              <Coll display={styleBanner}>
+              <Coll display={displayLogo}>
                 <div>
                   <img src={logo} alt="logo" />
                 </div>
