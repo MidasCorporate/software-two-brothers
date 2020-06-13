@@ -1,14 +1,21 @@
 import React from 'react';
-import { Form } from '@unform/web';
+import { Form, Input, Textarea } from '@rocketseat/unform';
 import { toast } from 'react-toastify';
 import { FaWhatsapp } from 'react-icons/fa';
+import * as Yup from 'yup';
 
 import api from '~/services/api';
 
-import Input from '~/components/Input';
-import Textarea from '~/components/Textarea';
 import { Wrapper, Information, Container } from './styles';
 import logo from '~/assets/logo.png';
+
+const schema = Yup.object().shape({
+  name: Yup.string().required('Nome é obrigatório'),
+  email: Yup.string()
+    .email('Insira um e-mail válido')
+    .required('E-mail é obrigatório'),
+  message: Yup.string().required('Mensagem é obrigatória'),
+});
 
 function Contact() {
   async function handleSubmit({ name, email, cel, tel, message }) {
@@ -46,7 +53,7 @@ function Contact() {
             </a>
           </span>
         </div>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={handleSubmit} schema={schema}>
           <div>
             <Input name="name" placeholder="Nome" />
           </div>

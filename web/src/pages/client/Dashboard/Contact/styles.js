@@ -128,6 +128,13 @@ export const Container = styled.div`
       background: #f6f6f6;
     }
 
+    span {
+      color: #f7eb04;
+      font-weight: bold;
+      margin-top: 10px;
+      align-self: center;
+    }
+
     .contact {
       display: flex;
       justify-content: space-between;
