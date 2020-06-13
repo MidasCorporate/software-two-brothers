@@ -41,6 +41,7 @@ function Dashboard() {
   const [tag, setTag] = useState(false);
   const [opacity, setOpacity] = useState(true);
   const [displayLogo, setDisplayLogo] = useState(true);
+  const [bannerAutomatic, setBannerAutomatic] = useState(true);
 
   useEffect(() => {
     async function loadBanner() {
@@ -64,30 +65,67 @@ function Dashboard() {
   }, []);
 
   useEffect(() => {
-    if (bannerCarrocel.length === 1) {
-      setTest(bannerCarrocel[0]);
-      return;
-    }
-    setTimeout(() => {
-      if (bannerCarrocel[number] !== undefined) {
-        setNumber(number + 1);
-
-        setTest(bannerCarrocel[number]);
-
-        setTag(true);
+    if (bannerAutomatic) {
+      if (bannerCarrocel.length === 1) {
+        setTest(bannerCarrocel[0]);
+        return;
       }
-    }, 10000);
-    if (bannerCarrocel[number] === undefined) {
-      setNumber(0);
-    }
+      setTimeout(() => {
+        if (bannerCarrocel[number] !== undefined) {
+          setNumber(number + 1);
 
-    setTimeout(() => {
-      setTag(false);
-    }, 10000);
+          setTest(bannerCarrocel[number]);
+
+          setTag(true);
+        }
+      }, 10000);
+      if (bannerCarrocel[number] === undefined) {
+        setNumber(0);
+      }
+
+      setTimeout(() => {
+        setTag(false);
+      }, 10000);
+    }
   }, [number]);
+
+  function handleClickAdvanceBanner() {
+    setBannerAutomatic(false);
+    if (bannerCarrocel[number] !== undefined) {
+      setNumber(number + 1);
+      console.log(number);
+      setTest(bannerCarrocel[number]);
+      setTag(!tag);
+
+      // setTag(true);
+    }
+    // if (bannerCarrocel[number] === undefined) {
+    //   setNumber(0);
+    // }
+  }
+  function handleClickBackBanner() {
+    setBannerAutomatic(false);
+    if (bannerCarrocel[number] !== undefined) {
+      setNumber(number - 1);
+      console.log(number);
+      setTest(bannerCarrocel[number]);
+      setTag(!tag);
+
+      // setTag(true);
+    }
+    // if (bannerCarrocel[number] === undefined) {
+    //   setNumber(0);
+    // }
+  }
 
   return (
     <>
+      <button type="button" onClick={handleClickAdvanceBanner}>
+        Teste Avançar
+      </button>
+      <button type="button" onClick={handleClickBackBanner}>
+        Teste Retroceder
+      </button>
       <Header />
       <Intro id="inicio">
         <Banner opacity={opacity} tag={tag} urlImg={teste}>
