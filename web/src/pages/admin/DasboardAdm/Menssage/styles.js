@@ -1,23 +1,5 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  max-width: 900px;
-  margin: 50px auto;
-  display: flex;
-  flex-direction: column;
-
-  @media (max-width: 960px) {
-    max-width: 500px;
-  }
-`;
-
-export const Grid = styled.div`
-  display: grid;
-  /* grid-template-columns: repeat(8, 1fr); */
-  grid-template-columns: repeat(auto-fill, minmax(12, 2fr));
-  grid-gap: 20px;
-`;
-
 export const CardButton = styled.button`
   display: flex;
   align-items: center;
@@ -219,24 +201,6 @@ export const WindowBannerImg = styled.div`
     max-height: 400px;
     overflow: auto;
     /* position: relative; */
-  }
-
-  form {
-    input {
-      margin-top: 10px;
-      display: flex;
-      position: absolute;
-      width: 150px;
-      text-align: center;
-    }
-    select {
-      margin-top: 40px;
-      display: flex;
-      position: absolute;
-      width: 150px;
-      text-align: center;
-      color: #999;
-    }
   }
 `;
 

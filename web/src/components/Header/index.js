@@ -37,12 +37,12 @@ function Header() {
     setOpen(!open);
   }
 
-  function handleClosed() {
-    const menuSection = document.querySelector('.menu-section');
+  // function handleClosed() {
+  //   const menuSection = document.querySelector('.menu-section');
 
-    menuSection.classList.toggle('on', false);
-    setOpen(!open);
-  }
+  //   menuSection.classList.toggle('on', false);
+  //   setOpen(!open);
+  // }
 
   return (
     <Container headerColor={headerColor}>
@@ -54,22 +54,22 @@ function Header() {
           <div className="menu-section">
             <ul>
               <li>
-                <a href="#inicio" onClick={handleClosed}>
+                <a href="#inicio" onClick={() => handleToggle([])}>
                   INÍCIO
                 </a>
               </li>
               <li>
-                <a href="#sobre" onClick={handleClosed}>
+                <a href="#sobre" onClick={handleToggle}>
                   SOBRE
                 </a>
               </li>
               <li>
-                <a href="#servicos" onClick={handleClosed}>
+                <a href="#servicos" onClick={handleToggle}>
                   SERVIÇOS
                 </a>
               </li>
               <li>
-                <a href="#contatos" onClick={handleClosed}>
+                <a href="#contatos" onClick={handleToggle}>
                   CONTATOS
                 </a>
               </li>
