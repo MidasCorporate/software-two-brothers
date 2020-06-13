@@ -83,13 +83,13 @@ function Dashboard() {
     <>
       <Header />
       <Intro id="inicio">
-        <Banner opacity={styleBanner.opacity} tag={tag} urlImg={teste}>
+        <Banner opacity={styleBanner} tag={tag} urlImg={teste}>
           <div />
         </Banner>
         <IntroBody>
           <Container>
             <Row>
-              <Coll display={styleBanner.displayLogo}>
+              <Coll display={styleBanner}>
                 <div>
                   <img src={logo} alt="logo" />
                 </div>

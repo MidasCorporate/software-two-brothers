@@ -34,7 +34,9 @@ export const Banner = styled.div`
     overflow: hidden;
     /* filter: brightness(20%); */
     filter: ${(props) =>
-      props.opacity ? `brightness(${props.opacity}%)` : 'brightness(95%)'};
+      props.opacity
+        ? `brightness(${props.opacity.opacity}%)`
+        : 'brightness(95%)'};
     background-repeat: no-repeat;
 
     animation: ${(props) => (props.tag ? 'div' : 'div2')} 4s forwards;
@@ -150,7 +152,7 @@ export const Coll = styled.div`
   padding-left: 15px;
   margin-left: 8.33333333%;
 
-  display: ${(props) => (props.display ? '' : 'none')};
+  display: ${(props) => (props.display.displayLogo ? '' : 'none')};
 
   animation: div3 5s forwards;
   @keyframes div3 {
