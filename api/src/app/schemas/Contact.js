@@ -4,18 +4,21 @@ const ContactSchema = new mongoose.Schema(
   {
     name: {
       type: String,
+      required: true,
     },
     email: {
       type: String,
     },
     cel: {
       type: String,
+      required: true,
     },
     tel: {
       type: String,
     },
     message: {
       type: String,
+      required: true,
     },
   },
   {
