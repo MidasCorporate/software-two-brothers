@@ -176,10 +176,6 @@ export const Coll = styled.div`
   }
 `;
 
-export const Maps = styled.div`
-  /* z-index: 3; */
-`;
-
 export const Footer = styled.footer`
   div {
     display: flex;
@@ -192,5 +188,10 @@ export const Footer = styled.footer`
   strong {
     color: #333;
     margin-right: 5px;
+
+    a {
+      color: #333;
+      margin-left: 5px;
+    }
   }
 `;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
-
+// import * as L from 'leaflet';
+// import { GestureHandling } from 'leaflet-gesture-handling';
 import { Link } from 'react-router-dom';
 
 import {
@@ -20,10 +21,14 @@ import Contact from '~/pages/client/Dashboard/Contact';
 import Header from '~/components/Header';
 
 import '~/styles/leaflet.css';
+// import 'leaflet/dist/leaflet.css';
+// import 'leaflet-gesture-handling/dist/leaflet-gesture-handling.css';
 
 import api from '~/services/api';
 
 function Dashboard() {
+  // L.Map.addInitHook('addHandler', 'gestureHandling', GestureHandling);
+
   const position = {
     lat: -19.3949988,
     lng: -54.5728501,
@@ -88,7 +93,7 @@ function Dashboard() {
                 {/* Teste
                 </button> */}
                 <p> Especialistas em saude automobilistica</p>
-                <a href="#about">Saber Mais</a>{' '}
+                <a href="#sobre">Saber Mais</a>{' '}
               </Coll>
             </Row>
           </Container>
@@ -97,7 +102,7 @@ function Dashboard() {
       <AboutClient />
       <Service />
       <Reviews />
-      <Map center={position} zoom={18}>
+      <Map scrollWheelZoom={false} center={position} zoom={18}>
         <TileLayer
           attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
