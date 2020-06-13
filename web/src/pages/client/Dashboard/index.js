@@ -46,11 +46,11 @@ function Dashboard() {
       const { data } = response;
 
       const [arrayImg] = data.map((item) => item.file);
-      const urlUnic = arrayImg.map((item) => item.url);
-
+      // const urlUnic = arrayImg.map((item) => item.url);
+      // console.log(arrayImg[0].url);
       setStyleBanner(data[0]);
       // console.log(data[0].opacity);
-      setBannerCarrossel(urlUnic);
+      setBannerCarrossel(arrayImg[0].url);
       setNumber(true);
     }
     loadBanner();

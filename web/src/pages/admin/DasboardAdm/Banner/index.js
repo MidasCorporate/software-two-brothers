@@ -81,7 +81,6 @@ function Banner() {
     setOpacity(event.target.value);
   }
   function handleDisplayLogo(event) {
-    console.log(event.target.value);
     setDisplayLogo(event.target.value);
   }
 

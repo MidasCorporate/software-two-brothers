@@ -149,9 +149,9 @@ export const Coll = styled.div`
   padding-right: 15px;
   padding-left: 15px;
   margin-left: 8.33333333%;
-  /* display: none; */
-  display: ${(props) => (props.display ? 'flex' : 'none')}
-  /* ${(props) => console.log(props.display ? 'flex' : 'none')} */
+
+  display: ${(props) => (props.display ? '' : 'none')};
+
   animation: div3 5s forwards;
   @keyframes div3 {
     from {
