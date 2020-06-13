@@ -220,6 +220,24 @@ export const WindowBannerImg = styled.div`
     overflow: auto;
     /* position: relative; */
   }
+
+  form {
+    input {
+      margin-top: 10px;
+      display: flex;
+      position: absolute;
+      width: 150px;
+      text-align: center;
+    }
+    select {
+      margin-top: 40px;
+      display: flex;
+      position: absolute;
+      width: 150px;
+      text-align: center;
+      color: #999;
+    }
+  }
 `;
 
 export const DivButton = styled.div`

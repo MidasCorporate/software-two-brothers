@@ -11,6 +11,7 @@ import {
   MdRemoveRedEye,
   MdReply,
 } from 'react-icons/md';
+
 import { updateBanner } from '~/store/modules/file/actions';
 
 import BannerInput from './BannerInput';
@@ -36,6 +37,8 @@ function Banner() {
   const [tagWindow, setTagWindow] = useState(false);
   const [selectedItems, setSelectedItems] = useState([]);
   const [selectedImage, setSelectedImage] = useState([]);
+  const [opacity, setOpacity] = useState(0);
+  const [displayLogo, setDisplayLogo] = useState(true);
 
   useEffect(() => {
     api.get('files').then((response) => {
@@ -54,7 +57,8 @@ function Banner() {
   }
 
   function handleSave() {
-    dispatch(updateBanner(selectedItems));
+    dispatch(updateBanner(selectedItems, opacity, displayLogo));
+    setTagWindow(!tagWindow);
   }
 
   function handleSelectItem(id) {
@@ -71,6 +75,14 @@ function Banner() {
 
   function handleSelectImage(id) {
     setSelectedImage([id]);
+  }
+
+  function handleOpacity(event) {
+    setOpacity(event.target.value);
+  }
+  function handleDisplayLogo(event) {
+    console.log(event.target.value);
+    setDisplayLogo(event.target.value);
   }
 
   return (
@@ -165,14 +177,26 @@ function Banner() {
               ))}
             </ul>
           </fieldset>
+
+          <input
+            type="number"
+            placeholder="Opacidade"
+            name="opacity"
+            onChange={handleOpacity}
+          />
+
+          <select onChange={handleDisplayLogo}>
+            <option value="">Display logo</option>
+            <option value={false}>Disabiltado</option>
+          </select>
+          <DivButton>
+            <BannerInput />
+            <button onClick={handleSave} className="btn btn1" type="button">
+              <strong>Salvar</strong>
+            </button>
+            {/* <button type="button">Cancelar</button> */}
+          </DivButton>
         </Form>
-        <DivButton>
-          <BannerInput />
-          <button onClick={handleSave} className="btn btn1" type="button">
-            <strong>Salvar</strong>
-          </button>
-          {/* <button type="button">Cancelar</button> */}
-        </DivButton>
       </WindowBannerImg>
     </>
   );

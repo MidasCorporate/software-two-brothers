@@ -32,10 +32,12 @@ export const Banner = styled.div`
     background-image: ${(props) =>
       props.urlImg ? `url(${props.urlImg})` : `url(${backgroundImg})`};
     overflow: hidden;
-    filter: brightness(20%);
+    /* filter: brightness(20%); */
+    filter: ${(props) =>
+      props.opacity ? `brightness(${props.opacity}%)` : 'brightness(95%)'};
     background-repeat: no-repeat;
 
-    animation: ${(props) => (props.tag ? 'div' : 'div2')} 3s forwards;
+    animation: ${(props) => (props.tag ? 'div' : 'div2')} 4s forwards;
   }
 
   @keyframes div {
@@ -147,7 +149,9 @@ export const Coll = styled.div`
   padding-right: 15px;
   padding-left: 15px;
   margin-left: 8.33333333%;
-
+  /* display: none; */
+  display: ${(props) => (props.display ? 'flex' : 'none')}
+  /* ${(props) => console.log(props.display ? 'flex' : 'none')} */
   animation: div3 5s forwards;
   @keyframes div3 {
     from {

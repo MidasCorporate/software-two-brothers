@@ -38,6 +38,7 @@ function Dashboard() {
 
   const [number, setNumber] = useState();
   const [tag, setTag] = useState(false);
+  const [styleBanner, setStyleBanner] = useState([]);
 
   useEffect(() => {
     async function loadBanner() {
@@ -47,6 +48,8 @@ function Dashboard() {
       const [arrayImg] = data.map((item) => item.file);
       const urlUnic = arrayImg.map((item) => item.url);
 
+      setStyleBanner(data[0]);
+      // console.log(data[0].opacity);
       setBannerCarrossel(urlUnic);
       setNumber(true);
     }
@@ -54,6 +57,10 @@ function Dashboard() {
   }, []);
 
   useEffect(() => {
+    if (bannerCarrocel.length === 1) {
+      setTest(bannerCarrocel[0]);
+      return;
+    }
     setTimeout(() => {
       if (bannerCarrocel[number] !== undefined) {
         setNumber(number + 1);
@@ -62,27 +69,27 @@ function Dashboard() {
 
         setTag(true);
       }
-    }, 5000);
+    }, 10000);
     if (bannerCarrocel[number] === undefined) {
       setNumber(0);
     }
 
     setTimeout(() => {
       setTag(false);
-    }, 5000);
+    }, 10000);
   }, [number]);
 
   return (
     <>
       <Header />
       <Intro id="inicio">
-        <Banner tag={tag} urlImg={teste}>
+        <Banner opacity={styleBanner.opacity} tag={tag} urlImg={teste}>
           <div />
         </Banner>
         <IntroBody>
           <Container>
             <Row>
-              <Coll>
+              <Coll display={styleBanner.displayLogo}>
                 <div>
                   <img src={logo} alt="logo" />
                 </div>

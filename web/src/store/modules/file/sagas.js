@@ -20,9 +20,13 @@ export function* upload({ payload }) {
 
 export function* createBanner({ payload }) {
   try {
-    // const { id } = payload;
+    const { id, opacity, displayLogo } = payload;
 
-    yield call(api.post, 'files/imgBanner', payload);
+    yield call(api.post, 'files/imgBanner', {
+      id,
+      opacity,
+      displayLogo,
+    });
 
     toast.success('Albun gerado com sucesso');
   } catch (err) {
