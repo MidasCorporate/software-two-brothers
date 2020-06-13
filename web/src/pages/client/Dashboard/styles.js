@@ -152,7 +152,7 @@ export const Coll = styled.div`
   padding-left: 15px;
   margin-left: 8.33333333%;
 
-  display: ${(props) => (props.display.displayLogo ? '' : 'none')};
+  display: ${(props) => (props.display ? '' : 'none')};
 
   animation: div3 5s forwards;
   @keyframes div3 {
