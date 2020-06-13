@@ -5,6 +5,8 @@ import { Map, Marker, Popup, TileLayer } from 'react-leaflet';
 // import { GestureHandling } from 'leaflet-gesture-handling';
 import { Link } from 'react-router-dom';
 
+import { MdNavigateNext } from 'react-icons/md';
+
 import {
   Intro,
   IntroBody,
@@ -13,6 +15,7 @@ import {
   Coll,
   Footer,
   Banner,
+  DivBottomBanner,
 } from './styles';
 import logo from '~/assets/logo.png';
 import Service from './Services';
@@ -99,33 +102,29 @@ function Dashboard() {
 
       // setTag(true);
     }
-    // if (bannerCarrocel[number] === undefined) {
-    //   setNumber(0);
-    // }
-  }
-  function handleClickBackBanner() {
-    setBannerAutomatic(false);
-    if (bannerCarrocel[number] !== undefined) {
-      setNumber(number - 1);
-      console.log(number);
-      setTest(bannerCarrocel[number]);
-      setTag(!tag);
-
-      // setTag(true);
+    if (bannerCarrocel[number] === undefined) {
+      setNumber(0);
     }
-    // if (bannerCarrocel[number] === undefined) {
-    //   setNumber(0);
-    // }
   }
+  // function handleClickBackBanner() {
+  //   setBannerAutomatic(false);
+  //   if (bannerCarrocel[number] !== undefined) {
+  //     setNumber(number - 1);
+  //     console.log(number);
+  //     setTest(bannerCarrocel[number]);
+  //     setTag(!tag);
+
+  // setTag(true);
+
+  // if (bannerCarrocel[number] === undefined) {
+  //   setNumber(0);
+  // }
 
   return (
     <>
-      <button type="button" onClick={handleClickAdvanceBanner}>
-        Teste Avançar
-      </button>
-      <button type="button" onClick={handleClickBackBanner}>
-        Teste Retroceder
-      </button>
+      {/* <button type="button" onClick={handleClickBackBanner}>
+      Teste Retroceder
+    </button> */}
       <Header />
       <Intro id="inicio">
         <Banner opacity={opacity} tag={tag} urlImg={teste}>
@@ -149,6 +148,11 @@ function Dashboard() {
               </Coll>
             </Row>
           </Container>
+          <DivBottomBanner>
+            <button type="button" onClick={handleClickAdvanceBanner}>
+              <MdNavigateNext />
+            </button>
+          </DivBottomBanner>
         </IntroBody>
       </Intro>
       <AboutClient />

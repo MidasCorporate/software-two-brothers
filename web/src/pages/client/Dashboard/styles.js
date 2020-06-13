@@ -113,6 +113,7 @@ export const IntroBody = styled.div`
       background-color: #333;
     }
   }
+
   @media (min-width: 768px) {
     font-size: 18px;
     letter-spacing: 1px;
@@ -176,6 +177,37 @@ export const Coll = styled.div`
       display: block;
       max-width: 100%;
       height: auto;
+    }
+  }
+`;
+
+export const DivBottomBanner = styled.div`
+  position: relative;
+  z-index: 10;
+  float: right;
+  display: flex;
+  align-items: center;
+  button {
+    float: right;
+    border-radius: 50%;
+    border: none;
+    padding: 10px;
+    margin-top: -155px;
+    background: transparent;
+    transition: background 3s;
+    svg {
+      width: 45px;
+      height: 45px;
+      transition: width 3s;
+      color: #999;
+    }
+    :hover {
+      /* background: rgba(255, 255, 255, 0.2); */
+      svg {
+        width: 80px;
+        height: 80px;
+        color: #eee;
+      }
     }
   }
 `;
