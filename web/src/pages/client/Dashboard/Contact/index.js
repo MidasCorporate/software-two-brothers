@@ -31,7 +31,7 @@ function Contact() {
           </strong>
           <strong>Sinta-se livre para nos contatar!</strong>
           <span>
-            <FaWhatsapp size={18} />
+            <FaWhatsapp size={19} />
             <a href="https://api.whatsapp.com/send?phone=5567998408117">
               (67) 9 9840-8117
             </a>

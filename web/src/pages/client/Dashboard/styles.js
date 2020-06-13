@@ -131,5 +131,10 @@ export const Footer = styled.footer`
   strong {
     color: #333;
     margin-right: 5px;
+
+    a {
+      color: #333;
+      margin-left: 5px;
+    }
   }
 `;

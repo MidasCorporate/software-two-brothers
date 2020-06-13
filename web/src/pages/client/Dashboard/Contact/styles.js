@@ -36,6 +36,7 @@ export const Container = styled.div`
     span {
       display: flex;
       justify-content: center;
+      align-items: center;
 
       a {
         color: #f7eb04;
