@@ -12,23 +12,24 @@ class ContactController {
     const { id, opacity, displayLogo } = req.body;
 
     const files = await File.find();
-    // const CorrectFiles = await files.filter((file) => file.id === id.id);
+    const dashClient = await DashClient.find();
 
     const file = id.map((item) => files.find((archive) => archive.id === item));
 
-    // const { _id, url } = docs;
-    // const file = {
-    //   _id,
-    //   url,
-    // };
+    if (dashClient.length === 0) {
+      const listBanner = await DashClient.create({
+        file,
+        opacity,
+        displayLogo,
+      });
 
+      return res.json(listBanner);
+    }
     const listBanner = await DashClient.updateOne({
       file,
       opacity,
       displayLogo,
     });
-
-    // const { _id, url  } = listBanner
 
     return res.json(listBanner);
   }
