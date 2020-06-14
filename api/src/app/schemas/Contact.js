@@ -23,6 +23,7 @@ const ContactSchema = new mongoose.Schema(
     read: {
       type: Boolean,
       required: true,
+      default: false,
     },
   },
   {
