@@ -1,6 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { MdInsertComment, MdCancel } from 'react-icons/md';
+
+import api from '~/services/api';
 
 import {
   CardHeader,
@@ -12,9 +14,30 @@ import {
 
 function Post() {
   const [tagWindow, setTagWindow] = useState(false);
+  const [contacts, setContacts] = useState([]);
+
+  useEffect(() => {
+    async function loadContact() {
+      const response = await api.get('contacts');
+      console.log(response.data);
+      setContacts(response.data);
+    }
+    loadContact();
+  }, []);
 
   function handleWindow() {
     setTagWindow(!tagWindow);
+  }
+
+  async function handleMarkAsRead(_id) {
+    await api.put(`contacts/${_id}`);
+
+    alert('ok');
+    setContacts(
+      contacts.map((contact) =>
+        contact._id === _id ? { ...contact, read: true } : contact
+      )
+    );
   }
 
   return (
@@ -41,111 +64,17 @@ function Post() {
         <fieldset>
           <table>
             <tbody>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf </td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf </td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf</td>
-              </tr>
-              <tr>
-                <td>Two Brothers</td>
-                <td>two@brothers.com</td>
-                <td>010102010100</td>
-                <td>110101101021</td>
-                <td>quantos custa para polir um golf </td>
-              </tr>
+              {contacts.map((contact) => (
+                <tr key={contact._id} unread={!contact.read}>
+                  <td>{contact.name}</td>
+                  <td>{contact.email}</td>
+                  <td>{contact.cel}</td>
+                  <td>{contact.tel}</td>
+                  <td onClick={() => handleMarkAsRead(contact._id)}>
+                    {contact.message}
+                  </td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </fieldset>

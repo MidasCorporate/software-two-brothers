@@ -14,6 +14,8 @@ const schema = Yup.object().shape({
   email: Yup.string()
     .email('Insira um e-mail válido')
     .required('E-mail é obrigatório'),
+  cel: Yup.string(),
+  tel: Yup.string(),
   message: Yup.string().required('Mensagem é obrigatória'),
 });
 

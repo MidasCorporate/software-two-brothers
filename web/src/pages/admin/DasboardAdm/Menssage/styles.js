@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 export const CardButton = styled.button`
   display: flex;
@@ -60,7 +60,7 @@ export const WindowMessage = styled.div`
   background-color: #fff;
   border: 2px solid red;
   color: #999;
-  padding: 50px 25px 10px 25px;
+  padding: 25px 5px 10px 10px;
   border-radius: 4px;
   margin-left: 45px;
   z-index: 1;
@@ -86,9 +86,9 @@ export const WindowMessage = styled.div`
   }
 
   fieldset {
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
     overflow: auto;
+    padding: 10px 0;
 
     table {
       width: 100%;
@@ -104,9 +104,16 @@ export const WindowMessage = styled.div`
           background: #f6f6f6;
           margin: 5px 0;
           border-radius: 4px;
-          color: #333;
+          color: ${(props) => (props.unread ? '#999' : '#333')};
+          font-weight: ${(props) => (props.unread ? '400' : 'bold')};
+          cursor: pointer;
+
           td {
+            max-width: 200px;
             margin-left: 15px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
             & + td {
               padding-left: 15px;
             }
