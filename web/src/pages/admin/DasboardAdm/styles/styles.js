@@ -130,7 +130,9 @@ export const WindowMessage = styled.div`
 
 export const Close = styled.div`
   position: absolute;
-  margin-top: -25px;
+  /* margin-top: -25px; */
+  top: 0;
+  left: 0;
 
   svg {
     cursor: pointer;

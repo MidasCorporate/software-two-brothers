@@ -10,6 +10,7 @@ import {
   CardButton,
   WindowMessage,
   Close,
+  ButtonContact,
 } from './styles';
 
 function Post() {
@@ -19,7 +20,6 @@ function Post() {
   useEffect(() => {
     async function loadContact() {
       const response = await api.get('contacts');
-      console.log(response.data);
       setContacts(response.data);
     }
     loadContact();
@@ -32,7 +32,6 @@ function Post() {
   async function handleMarkAsRead(_id) {
     await api.put(`contacts/${_id}`);
 
-    alert('ok');
     setContacts(
       contacts.map((contact) =>
         contact._id === _id ? { ...contact, read: true } : contact
@@ -62,18 +61,32 @@ function Post() {
           <MdCancel color="red" size={20} onClick={() => handleWindow([])} />
         </Close>
         <fieldset>
-          <table>
+          <table cellSpacing={0}>
             <tbody>
               {contacts.map((contact) => (
-                <tr key={contact._id} unread={!contact.read}>
-                  <td>{contact.name}</td>
-                  <td>{contact.email}</td>
-                  <td>{contact.cel}</td>
-                  <td>{contact.tel}</td>
-                  <td onClick={() => handleMarkAsRead(contact._id)}>
-                    {contact.message}
-                  </td>
-                </tr>
+                <ButtonContact
+                  key={contact._id}
+                  unread={contact.read}
+                  type="button"
+                  onClick={() => handleMarkAsRead(contact._id)}
+                >
+                  <tr>
+                    <td>{contact.name}</td>
+                    <td>{contact.email}</td>
+                    <td>{contact.cel}</td>
+                    <td>{contact.tel}</td>
+                    <td>{contact.message}</td>
+                    <td>
+                      <div>
+                        <p>{contact.name}</p>
+                        <p>{contact.email}</p>
+                        <p>{contact.cel}</p>
+                        <p>{contact.tel}</p>
+                        <p>{contact.message}</p>
+                      </div>
+                    </td>
+                  </tr>
+                </ButtonContact>
               ))}
             </tbody>
           </table>

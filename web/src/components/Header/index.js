@@ -7,7 +7,7 @@ import logo from '~/assets/logo.png';
 import { Container, Content } from './styles';
 
 function Header() {
-  const [headerColor, setHeaderColor] = useState(false);
+  const [headerColor, setHeaderColor] = useState(true);
   const [open, setOpen] = useState(true);
 
   useEffect(() => {
