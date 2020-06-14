@@ -55,7 +55,7 @@ export const CardButton = styled.button`
 export const CardHeader = styled.header`
   display: flex;
   align-items: initial;
-  margin-top: -45px;
+  margin-top: -90px;
   margin-left: -10px;
   background: red;
   /* position: absolute; */

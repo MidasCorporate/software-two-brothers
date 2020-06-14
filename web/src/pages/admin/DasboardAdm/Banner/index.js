@@ -87,9 +87,6 @@ function Banner() {
   return (
     <>
       <CardButton onClick={handleWindow}>
-        <span>
-          <div />
-        </span>
         <CardHeader>
           <MdInsertPhoto color="#FFF" size={35} />
         </CardHeader>
