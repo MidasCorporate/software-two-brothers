@@ -60,7 +60,7 @@ export const WindowMessage = styled.div`
   background-color: #fff;
   border: 2px solid red;
   color: #999;
-  padding: 50px 25px 10px 25px;
+  padding: 25px 5px 10px 10px;
   border-radius: 4px;
   margin-left: 45px;
   z-index: 1;
@@ -86,32 +86,16 @@ export const WindowMessage = styled.div`
   }
 
   fieldset {
-    /* width: 100%;
-    height: 100%; */
+    width: 100%;
     overflow: auto;
+    padding: 10px 0;
 
     table {
       width: 100%;
-      /* display: flex;
-    flex: 1; */
 
       tbody {
         display: flex;
         flex-direction: column;
-
-        tr {
-          padding: 5px 0;
-          background: #f6f6f6;
-          margin: 5px 0;
-          border-radius: 4px;
-          color: #333;
-          td {
-            margin-left: 15px;
-            & + td {
-              padding-left: 15px;
-            }
-          }
-        }
       }
     }
   }
@@ -125,5 +109,59 @@ export const Close = styled.div`
   svg {
     cursor: pointer;
     margin: none;
+  }
+`;
+
+export const ButtonContact = styled.button`
+  ${(props) => console.log(props.unread)}
+  display: flex;
+  border: none;
+  background: #ffff;
+
+  :hover {
+    div {
+      display: block;
+      position: absolute;
+      top: calc(50% + 10px);
+      left: calc(45% - 100px);
+      width: 400px;
+      height: 400px;
+      padding: 20px 5px 2px 10px;
+      background-color: #fff;
+      border: 2px solid red;
+
+      p {
+        margin-bottom: 5px;
+      }
+    }
+  }
+
+  tr {
+    padding: 5px 0;
+    background: #ffff;
+    border-radius: 4px;
+    padding-left: 5px;
+
+    & + tr {
+      margin: 10px 0;
+    }
+
+    td {
+      max-width: 200px;
+      margin-left: 15px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      color: ${(props) => (props.unread ? '#999' : '#333')};
+      font-weight: ${(props) => (props.unread ? '400' : 'bold')};
+
+      & + td {
+        padding-left: 15px;
+      }
+
+      div {
+        display: none;
+      }
+    }
   }
 `;

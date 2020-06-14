@@ -31,5 +31,6 @@ routes.post('/files', upload.single('file'), FileController.store);
 routes.post('/files/imgBanner', DashClientController.store);
 
 routes.get('/contacts', ContactController.index);
+routes.put('/contacts/:_id', ContactController.update);
 
 export default routes;
