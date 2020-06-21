@@ -11,9 +11,9 @@ export default function Routes() {
   return (
     <Switch>
       <Route path="/" exact component={DashboardClient} />
-      <Route path="/adm" component={SingnIn} />
+      <Route path="/adm" exact component={SingnIn} />
 
-      <Route path="/dashboardadm" component={DashboardAdm} isPrivate />
+      <Route path="/dashboardadm" exact component={DashboardAdm} isPrivate />
     </Switch>
   );
 }
